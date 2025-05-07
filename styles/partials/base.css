@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Swistblnk Banthers';
-    src: url('/assets/fonts/Swistblnk Banthers.otf') format('opentype');
+    src: url('./assets/fonts/Swistblnk Banthers.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +23,7 @@
 body {
     margin: 0;
     font-family: 'Swistblnk Banthers', serif;
-    background: url("/assets/images/background.svg") center/cover;
+    background: url("./assets/images/background.svg") center/cover;
     color: #333;
     line-height: 1.5;
 }
