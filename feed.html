@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./styles/partials/_base.css" />
+    <link rel="stylesheet" href="./styles/partials/_header.css" />
+    <link rel="stylesheet" href="./styles/partials/_buttons.css" />
+    <link rel="stylesheet" href="./styles/partials/_post.css" />
+    <link rel="stylesheet" href="./styles/feed.css" />
+    <link rel="icon" type="vector/svg" href="./assets/images/logo_small.svg" sizes="16x16" />
+
+    <title>Literalis - Página Inicial</title>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo_small.svg" alt="Literallis" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Sobre nós</a></li>
+            <li><a href="index.html">Sair</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="feed-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="icon-logo"></div>
+            <nav class="menu">
+                <button>Home</button>
+                <button>Pesquisa</button>
+                <button>Ofensiva</button>
+            </nav>
+
+            <div class="actions">
+                <button class="olive-btn">Atualizar leituras</button>
+                <button class="olive-btn">Novo livro</button>
+            </div>
+
+            <div class="timer">
+                <p class="title">TEMPORIZADOR</p>
+                <img src="./assets/images/clock.svg" alt="Cronômetro">
+                <p>MANTENHA O FOCO E REGISTRE SEU TEMPO DE LEITURA DIÁRIO</p>
+                <a href="#">Configurar cronômetro</a>
+            </div>
+        </aside>
+
+        <!-- FEED PRINCIPAL -->
+        <section class="main-feed">
+            <div class="user-greeting">
+                <h1>OI <span>JULIA</span></h1>
+                <p>Ofensiva: 20 dias</p>
+            </div>
+
+            <div class="cards-section">
+                <h2>CARDS</h2>
+                <div class="cards">
+                    <div class="card"></div><div class="card"></div><div class="card"></div>
+                    <div class="card"></div><div class="card"></div><div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab" active>Social</button>
+                <button class="tab">Descubra</button>
+            </div>
+
+            <!-- POSTS PLACEHOLDERS -->
+
+             <!-- POST 1 | EDUARDA -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp1.jpg" alt="Foto do usuário" class="user-photo">
+                        <strong>Eduarda</strong>
+                    </div>
+                    <span class="post-time">
+                        há 30 minutos
+                    </span>
+                </div>
+                <div class="post-body">
+                    <div class="book-info">
+                        <img src="./assets/images/books/book1.jpg" alt="Capa do livro" class="book-cover">
+                        <div class="book-details">
+                            <h3><strong>Paraíso Perdido</strong></h3>
+                            <p><strong>Autor:</strong> John Milton</p>
+                            <p><strong>Editora:</strong> Editora 34</p>
+                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <div class="progress-bar"><div style="width: 70%"></div></div>
+                    </div>
+                    </div>
+                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                </div>
+                <div class="post-footer">
+                    <button>CURTIR</button>
+                    <button>COMENTAR</button>
+                </div>
+            </div>
+
+            <!-- POST 2 | RAFAELA -->
+            <div class="post"> 
+                <div class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp2.jpg" alt="Foto do usuário" class="user-photo">
+                        <strong>Rafaela</strong>
+                    </div>
+                    <span class="time">há 48 minutos</span>
+                </div>
+                <div class="post-body">
+                    <div class="book-info">
+                        <img src="./assets/images/books/book2.jpg" alt="Capa do livro" class="book-cover">
+                        <div class="info">
+                            <h3><strong>A Divina Comédia</strong></h3>
+                            <p><strong>Autor:</strong> Dante Alighieri</p>
+                            <p><strong>Editora:</strong> Editora 34</p>
+                            <p><strong>Ano de lançamento:</strong> 1933</p>
+                            <div class="progress-bar"><div style="width: 70%"></div></div>
+                    </div>
+                    </div>
+                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                </div>
+                <div class="post-footer">
+                    <button>CURTIR</button>
+                    <button>COMENTAR</button>
+                </div>
+            </div>
+
+            <!-- POST 3 | MANUEL -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp3.jpg" alt="Foto do usuário" class="user-photo">
+                        <strong>Manuel</strong>
+                    </div>
+                    <span class="time">Há 3 horas</span>
+                </div>
+                <div class="post-body">
+                    <div class="book-info">
+                        <img src="./assets/images/books/book3.jpg" alt="Capa do livro" class="book-cover">
+                        <div class="info">
+                            <h3><strong>Os Irmãos Karamázov</strong></h3>
+                            <p><strong>Autor:</strong> Fiódor Dostoiévski</p>
+                            <p><strong>Editora:</strong> Editora 34</p>
+                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <div class="progress-bar"><div style="width: 70%"></div></div>
+                    </div>
+                    </div>
+                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                </div>
+                <div class="post-footer">
+                    <button>CURTIR</button>
+                    <button>COMENTAR</button>
+                </div>
+            </div>
+
+            <!-- POST 4 | EDINILSON -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp4.jpg" alt="Foto do usuário" class="user-photo">
+                        <strong>Edinilson</strong>
+                    </div>
+                    <span class="time">Ontem</span>
+                </div>
+                <div class="post-body">
+                    <div class="book-info">
+                        <img src="./assets/images/books/book4.jpg" alt="Capa do livro" class="book-cover">
+                        <div class="info">
+                            <h3><strong>A Metamorfose</strong></h3>
+                            <p><strong>Autor:</strong> Franz Kafka</p>
+                            <p><strong>Editora:</strong> Companhia das Letras</p>
+                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <div class="progress-bar"><div style="width: 70%"></div></div>
+                    </div>
+                    </div>
+                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                </div>
+                <div class="post-footer">
+                    <button>CURTIR</button>
+                    <button>COMENTAR</button>
+                </div>
+
+            </div>
+
+            <div class="post"> <!-- POST 5 | BATATILSON -->
+
+                <div class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp5.jpg" alt="Foto do usuário" class="user-photo">
+                        <strong>Batatilson</strong>
+                    </div>
+                    <span class="time">há 4 dias</span>
+                </div>
+
+                <div class="post-body">
+                    <div class="book-info">
+                        <img src="./assets/images/books/book5.jpg" alt="Capa do livro" class="book-cover">
+                        <div class="book-details">
+                            <h3><strong>Anna Kariênina</strong></h3>
+                            <p><strong>Autor:</strong> Lev Tolstói</p>
+                            <p><strong>Editora:</strong> Editora 34</p>
+                            <p><strong>Ano de lançamento:</strong> 2049</p>
+                            <div class="progress-bar"><div style="width: 70%"></div></div>
+                    </div>
+                    </div>
+                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                </div>
+
+                <div class="post-footer">
+                    <button>CURTIR</button>
+                    <button>COMENTAR</button>
+                </div>
+
+            </div>
+
+            
+
+            <div class="bottom-icons">
+                <button>NOTIFICACAO</button>
+                <button>MENSAGEM</button>
+            </div>
+
+        </section>
+      </main>
+
+    <footer>
+        <!-- Aqui tem o rodapé com as informações de contato, redes sociais e termos de uso -->
+    </footer>
+</body>
+</html>

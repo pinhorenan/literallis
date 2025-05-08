@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Swistblnk Banthers';
+    src: url('./assets/fonts/Swistblnk Banthers.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --brown: #A25430;
+    --olive: #5A5223;
+    --offwhite: #FEFEFE;
+    --vertical_width: 50px;
+    --ribbon-cut: 15px;
+    --ribbon-height: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Swistblnk Banthers', serif;
+    background: url("./assets/images/background.svg") center/cover;
+    color: #333;
+    line-height: 1.5;
+}
