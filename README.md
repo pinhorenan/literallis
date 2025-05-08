@@ -1,7 +1,7 @@
 
 # Literallis 📚
 
-**Literallis** é uma plataforma web de organização de leituras e compartilhamento de experiências literárias. Foi pensada como um ambiente para leitores registrarem o que leem, fazerem anotações, e interagirem com os livros de uma forma visual, bonita e inspiradora — com um toque de estética *light academia*.
+**Literallis** é uma plataforma web de organização de leituras e compartilhamento de experiências literárias. Foi pensada como um ambiente para leitores registrarem o que leem, fazerem anotações, e interagirem com os livros de uma forma visual, bonita e inspiradora.
 
 ## 📝 Licença
 
