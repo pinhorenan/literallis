@@ -1,16 +1,21 @@
 .feed-container {
     display: flex;
-    height: 100%;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 .sidebar {
-    width: 240px;
+    position: sticky;
+    top: var(--header-height);
+    flex: 0 0 240px;
+    height: calc(100vh - var(--header-height));
     background-color: #fff;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     border-right: 1px solid #ccc;
+    overflow-y: auto;
 }
 
 .sidebar .menu button, .sidebar .actions .olive-btn {
@@ -22,8 +27,6 @@
     color: var(--olive);
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-    transition: background 0.3s;
-    position: sticky
 }
 
 .sidebar .olive-btn {
@@ -44,6 +47,8 @@
     width: 120px;
     margin: 0.5rem 0;
 }
+
+/* FEED */
 
 .main-feed {
     flex: 1;
