@@ -14,18 +14,17 @@
     gap: 0.9rem;
     width: 100%;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
 }
 
 .cards::-webkit-scrollbar {
-    height: 6px;
+    height: 0px;
 }
 
 .cards::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 3px;
-
 }
 
 .cards::-webkit-scrollbar-track {
@@ -33,14 +32,34 @@
 }
 
 .card {
+    flex: 0 0 120px;
     width: 120px;
     height: 200px;
-    background: linear-gradient(to bottom, var(--olive), #fff);
     border-radius: 10px;
+    transition: transform 0.25s ease;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.card:first-of-type {
+    margin-left: 0.25rem;
+}
+
+.card:last-of-type {
+    margin-right: 0.25rem;
+}
+
+.card:hover {
+    transform: scale(1.08);
 }
 
 .book-recomendation {
     width: 120px;
     height: 200px;
     border-radius: 10px;
+    transition: transform 0.25s ease;
+}
+
+.book-recomendation:hover {
+    transform: scale((1.08));
 }

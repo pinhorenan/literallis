@@ -19,7 +19,7 @@
 .user-photo {
     width: 60px;
     border-radius: 50%;
-    border: 1px solid #ccc;
+    border: 1px solid var(--olivy);
 }
 
 /* Post body */
@@ -34,14 +34,15 @@
     display: flex;
     gap: 1rem;
     font-family: 'Montserrat', sans-serif;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--olivy);
     padding-right: 1rem;
 }
 
 .book-cover {
     max-width: 200px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid var(--olivy);
+    border-radius: 5px;
 }
 
 .progress-bar {
@@ -73,7 +74,7 @@
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 1rem;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid var(--olivy);
+    border-bottom: 1px solid var(--olivy);
     padding: 1rem 0;
 }

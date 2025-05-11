@@ -18,9 +18,9 @@
 
 .icon-button img,
 .icon-button svg {
-    width: 22px;
-    height: 22px;
-    stroke: var(--brown);
+    width: 24px;
+    height: 24px;
+    stroke: var(--olive);
 }
 
 .profile-btn img {
@@ -39,12 +39,13 @@
     outline-offset: 2px;
 }
 
+.like-btn svg { fill: none; }
+
 .like-btn.active {
   animation: pop 0.3s ease;
 }
 
-.like-btn[active] svg,
-.like-btn[active] img {
+.like-btn.active svg {
     stroke: var(--olive);
     fill: var(--olive);
 }
@@ -82,15 +83,21 @@
 .btn-primary:hover, .btn-more:hover { background-color: #5a5830; }
 
 .feed-switch-option {
+    color: var(--olive);
     padding: 0.5rem 1rem;
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid #333;
+    border: 1px solid var(--olive);
     background: white;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-.feed-switch-option[active]
+.feed-switch-option:hover {
+    background: var(--olive);
+    color: white;
+}
+
+.feed-switch-option[active],
 .feed-switch-option.active {
     background: var(--olive);
     color: white;

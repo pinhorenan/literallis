@@ -4,12 +4,12 @@
     left: 0;
     height: calc(100vh - var(--header-height) - 1px);
     width: 240px;
-    background-color: var(--olivy);
+    background-color: var(--offwhite);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--olivy);
     overflow-y: auto;
     z-index: 90;
 }
@@ -23,6 +23,11 @@
     color: var(--olive);
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+}
+
+.sidebar .menu button:hover, .sidebar .actions .olive-btn:hover {
+    background: var(--olive);
+    color: white;
 }
 
 .sidebar .olive-btn {
