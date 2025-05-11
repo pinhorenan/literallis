@@ -21,10 +21,47 @@
           <a href="index.html" class="logo">
             <img src="./assets/images/logo_small.svg" alt="Literallis" />
           </a>
+
+          <!-- USER GREETING -->
+          <div class="user-greeting">
+            <h1>OI <span>JULIA</span></h1>
+          </div>
+
           <ul class="nav-links">
-            <li><a href="index.html">Sobre nós</a></li>
-            <li><a href="index.html">Sair</a></li>
+
+            <!-- Barra de pesquisa estática -->
+            <li>
+              <div class="search-box">
+                <input type="text" placeholder="Pesquisar…" />
+                <button class="icon-button search-btn" title="Pesquisar">
+                    <img src="./assets/images/icons/search.svg" alt="Search Icon" />
+                </button>
+              </div>
+            </li>
+          
+            <!-- Notificação -->
+            <li>
+              <button class="icon-button" title="Notificações">
+                <img src="./assets/images/icons/notification.svg" alt="Notification Icon" />
+              </button>
+            </li>
+          
+            <!-- Mensagens -->
+            <li>
+              <button class="icon-button" title="Mensagens">
+                <img src="./assets/images/icons/message.svg" alt="Messages Icon" />
+              </button>
+            </li>
+          
+            <!-- Sair -->
+            <li>
+              <button class="icon-button logout-btn" title="Sair">
+                <!-- Ícone de logout -->
+                <img src="./assets/images/icons/exit.svg" alt="Logout Icon" />
+              </button>
+            </li>
           </ul>
+          
         </nav>
       </header>
 
@@ -34,9 +71,11 @@
         <aside class="sidebar">
             <div class="icon-logo"></div>
             <nav class="menu">
-                <button>Home</button>
-                <button>Pesquisa</button>
+                <button>Amigos</button>
+                <button>Comunidade</button>
+                <button>Eventos</button>
                 <button>Ofensiva</button>
+                <button>Livros</button>
             </nav>
 
             <div class="actions">
@@ -44,30 +83,42 @@
                 <button class="olive-btn">Novo livro</button>
             </div>
 
-            <div class="timer">
-                <p class="title">TEMPORIZADOR</p>
-                <img src="./assets/images/clock.svg" alt="Cronômetro">
-                <p>MANTENHA O FOCO E REGISTRE SEU TEMPO DE LEITURA DIÁRIO</p>
-                <a href="#">Configurar cronômetro</a>
-            </div>
         </aside>
 
         <!-- FEED PRINCIPAL -->
         <section class="main-feed">
-            <div class="user-greeting">
-                <h1>OI <span>JULIA</span></h1>
-                <p>Ofensiva: 20 dias</p>
-            </div>
 
+            
+
+            <!-- CARDS -->
             <div class="cards-section">
                 <h2>CARDS</h2>
                 <div class="cards">
-                    <div class="card"></div><div class="card"></div><div class="card"></div>
-                    <div class="card"></div><div class="card"></div><div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
                     <div class="card"></div>
                 </div>
             </div>
 
+            <!-- TABS -->
             <div class="tabs">
                 <button class="tab" active>Social</button>
                 <button class="tab">Descubra</button>
@@ -76,7 +127,7 @@
             <!-- POSTS PLACEHOLDERS -->
 
              <!-- POST 1 | EDUARDA -->
-            <div class="post">
+            <div class="post" data-post-id="1">
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp1.jpg" alt="Foto do usuário" class="user-photo">
@@ -93,20 +144,29 @@
                             <h3><strong>Paraíso Perdido</strong></h3>
                             <p><strong>Autor:</strong> John Milton</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <p><strong>Ano de lançamento:</strong> 1667</p>
                             <div class="progress-bar"><div style="width: 70%"></div></div>
                     </div>
                     </div>
-                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                    <p class="comment">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam
+                        poderosos mesmo em tradução. A retórica de Satanás é o ponto alto — é
+                        impossível não se encantar com a audácia do personagem. Leitura
+                        densa, mas cada canto compensa o esforço.
+                    </p>
                 </div>
                 <div class="post-footer">
-                    <button>CURTIR</button>
-                    <button>COMENTAR</button>
+                    <button class="icon-button like-btn" title="Curtir">
+                      <img src="./assets/images/icons/like.svg" alt="Like icon">
+                    </button>
+                    <button class="icon-button comment-btn" title="Comentar">
+                      <img src="./assets/images/icons/comment.svg" alt="Comment icon">
+                    </button>
                 </div>
             </div>
 
             <!-- POST 2 | RAFAELA -->
-            <div class="post"> 
+            <div class="post" data-post-id="1"> 
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp2.jpg" alt="Foto do usuário" class="user-photo">
@@ -121,20 +181,28 @@
                             <h3><strong>A Divina Comédia</strong></h3>
                             <p><strong>Autor:</strong> Dante Alighieri</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 1933</p>
+                            <p><strong>Ano de lançamento:</strong> 1320</p>
                             <div class="progress-bar"><div style="width: 70%"></div></div>
                     </div>
                     </div>
-                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                    <p class="comment">
+                        A jornada de Dante por Inferno, Purgatório e Paraíso surpreende pela
+                        atualidade das críticas políticas e pela musicalidade do terceto
+                        encadeado. Virgílio como guia é simplesmente inesquecível.
+                    </p>
                 </div>
                 <div class="post-footer">
-                    <button>CURTIR</button>
-                    <button>COMENTAR</button>
+                    <button class="icon-button like-btn" title="Curtir">
+                      <img src="./assets/images/icons/like.svg" alt="Like icon">
+                    </button>
+                    <button class="icon-button comment-btn" title="Comentar">
+                      <img src="./assets/images/icons/comment.svg" alt="Comment icon">
+                    </button>
                 </div>
             </div>
 
             <!-- POST 3 | MANUEL -->
-            <div class="post">
+            <div class="post" data-post-id="1">
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp3.jpg" alt="Foto do usuário" class="user-photo">
@@ -149,20 +217,28 @@
                             <h3><strong>Os Irmãos Karamázov</strong></h3>
                             <p><strong>Autor:</strong> Fiódor Dostoiévski</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <p><strong>Ano de lançamento:</strong> 1880</p>
                             <div class="progress-bar"><div style="width: 70%"></div></div>
                     </div>
                     </div>
-                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                    <p class="comment">
+                        Dostoiévski domina o debate moral — o capítulo do “Grande Inquisidor”
+                        me deixou sem fôlego. Filosofia, religião e crime se misturam num
+                        romance que vale cada uma das muitas páginas.
+                    </p>                    
                 </div>
                 <div class="post-footer">
-                    <button>CURTIR</button>
-                    <button>COMENTAR</button>
-                </div>
+                    <button class="icon-button like-btn" title="Curtir">
+                      <img src="./assets/images/icons/like.svg" alt="Like icon">
+                    </button>
+                    <button class="icon-button comment-btn" title="Comentar">
+                      <img src="./assets/images/icons/comment.svg" alt="Comment icon">
+                    </button>
+                </div>   
             </div>
 
             <!-- POST 4 | EDINILSON -->
-            <div class="post">
+            <div class="post" data-post-id="1">
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp4.jpg" alt="Foto do usuário" class="user-photo">
@@ -177,20 +253,28 @@
                             <h3><strong>A Metamorfose</strong></h3>
                             <p><strong>Autor:</strong> Franz Kafka</p>
                             <p><strong>Editora:</strong> Companhia das Letras</p>
-                            <p><strong>Ano de lançamento:</strong> 2013</p>
+                            <p><strong>Ano de lançamento:</strong> 1915</p>
                             <div class="progress-bar"><div style="width: 70%"></div></div>
                     </div>
                     </div>
-                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                    <p class="comment">
+                        Kafka atinge o absurdo logo na primeira frase: um caixeiro viajante
+                        acorda inseto. Curtinho, mas perturbador — o peso da culpa e da
+                        solidão fica martelando bem depois do fim.
+                    </p>
                 </div>
                 <div class="post-footer">
-                    <button>CURTIR</button>
-                    <button>COMENTAR</button>
+                    <button class="icon-button like-btn" title="Curtir">
+                      <img src="./assets/images/icons/like.svg" alt="Like icon">
+                    </button>
+                    <button class="icon-button comment-btn" title="Comentar">
+                      <img src="./assets/images/icons/comment.svg" alt="Comment icon">
+                    </button>
                 </div>
-
             </div>
 
-            <div class="post"> <!-- POST 5 | BATATILSON -->
+            <!-- POST 5 | BATATILSON -->
+            <div class="post" data-post-id="5"> 
 
                 <div class="post-header">
                     <div class="user-container">
@@ -199,7 +283,6 @@
                     </div>
                     <span class="time">há 4 dias</span>
                 </div>
-
                 <div class="post-body">
                     <div class="book-info">
                         <img src="./assets/images/books/book5.jpg" alt="Capa do livro" class="book-cover">
@@ -207,30 +290,68 @@
                             <h3><strong>Anna Kariênina</strong></h3>
                             <p><strong>Autor:</strong> Lev Tolstói</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 2049</p>
+                            <p><strong>Ano de lançamento:</strong> 1877</p>
                             <div class="progress-bar"><div style="width: 70%"></div></div>
                     </div>
                     </div>
-                    <p class="comment">As personagens são bastante cativantes, um importante ponto para que a leitura seja tão agradável. É fácil torcer por America e compartilhar de suas angústias e questionamentos, e ainda mais fácil cair de amores pelo príncipe Maxon. Aspen também é uma presença notável, mas, por conta do desenrolar da história, foi inevitável criar uma preferência pelo primeiro. De qualquer maneira, terminei a leitura tão dividida quanto America, sem saber por quem torcer. A história, como um todo, foi um tanto previsível, sem reservar muitas surpresas. Contudo, isso não alterou o fato de ter sido uma leitura deliciosamente agradável e rápida, uma excelente escolha para quem deseja relaxar e se entregar a um livro completamente envolvente.</p>
+                    <p class="comment">
+                        Tolstói constrói personagens com tanta vida que a história parece
+                        fofoca de amigos próximos. O contraste entre o drama de Anna e a
+                        busca espiritual de Liévyn cria uma narrativa intensa e, ao mesmo
+                        tempo, reflexiva.
+                    </p>
                 </div>
-
                 <div class="post-footer">
-                    <button>CURTIR</button>
-                    <button>COMENTAR</button>
+                    <button class="icon-button like-btn" title="Curtir">
+                      <img src="./assets/images/icons/like.svg" alt="Like icon">
+                    </button>
+                    <button class="icon-button comment-btn" title="Comentar">
+                      <img src="./assets/images/icons/comment.svg" alt="Comment icon">
+                    </button>
                 </div>
-
-            </div>
-
-            <div class="bottom-icons">
-                <button>NOTIFICACAO</button>
-                <button>MENSAGEM</button>
             </div>
 
         </section>
       </main>
 
-    <footer>
-        <!-- Aqui tem o rodapé com as informações de contato, redes sociais e termos de uso -->
-    </footer>
+      <script>
+        (function() {
+          // Chaves usadas no localStorage
+          const STORAGE_KEY_LIKES    = 'literalis_post_likes';
+          const STORAGE_KEY_COMMENTS = 'literalis_post_comments';
+        
+          // Carrega do localStorage ou inicializa objeto vazio
+          let likesData    = JSON.parse(localStorage.getItem(STORAGE_KEY_LIKES)    || '{}');
+          let commentsData = JSON.parse(localStorage.getItem(STORAGE_KEY_COMMENTS) || '{}');
+        
+          // Aplica estado salvo ao carregar a página
+          document.querySelectorAll('.post').forEach(post => {
+            const id = post.dataset.postId;
+            const likeBtn    = post.querySelector('.like-btn');
+            const commentBtn = post.querySelector('.comment-btn');
+        
+            if (likesData[id])    likeBtn.classList.add('active');
+            if (commentsData[id]) commentBtn.classList.add('active');
+          });
+        
+          // Handler genérico de toggle
+          function setupToggle(selector, storageObj, storageKey) {
+            document.querySelectorAll(selector).forEach(btn => {
+              btn.addEventListener('click', () => {
+                const post = btn.closest('.post');
+                const id   = post.dataset.postId;
+                const isActive = btn.classList.toggle('active');
+                storageObj[id] = isActive;
+                localStorage.setItem(storageKey, JSON.stringify(storageObj));
+              });
+            });
+          }
+        
+          // Liga os listeners
+          setupToggle('.like-btn',    likesData,    STORAGE_KEY_LIKES);
+          setupToggle('.comment-btn', commentsData, STORAGE_KEY_COMMENTS);
+        })();
+        </script>
+        
 </body>
 </html>

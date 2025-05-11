@@ -1,14 +1,41 @@
+/* USER GREETING NO HEADER */
+.user-greeting {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    transform: translateY(-10px);
+}
+
+.user-greeting h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Swistblnk Banthers', serif;
+    color: #222;
+}
+
+.user-greeting span {
+    font-weight: 700;
+    color: var(--olive);
+}
+
+/* MAIN */
+
 .feed-container {
     display: flex;
     align-items: flex-start;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .sidebar {
-    position: sticky;
-    top: var(--header-height);
-    flex: 0 0 240px;
-    height: calc(100vh - var(--header-height));
+    position: fixed;
+    top: var(--header-height + 1px);
+    left: 0;
+    height: calc(100vh - var(--header-height) - 1px);
+    width: 240px;
     background-color: #fff;
     padding: 1rem;
     display: flex;
@@ -16,6 +43,7 @@
     align-items: stretch;
     border-right: 1px solid #ccc;
     overflow-y: auto;
+    z-index: 90;
 }
 
 .sidebar .menu button, .sidebar .actions .olive-btn {
@@ -36,35 +64,22 @@
     font-weight: bold;
 }
 
-.timer {
-    text-align: center;
-    font-family: 'Swistblnk Banthers', serif;
-    font-size: 1.2rem;
-    margin-top: auto;
-}
-
-.timer img {
-    width: 120px;
-    margin: 0.5rem 0;
-}
-
 /* FEED */
 
 .main-feed {
+    margin: 0 241px;
     flex: 1;
     padding: 2rem;
+    overflow-x: hidden;
 }
 
-.user-greeting h1 {
-    font-size: 2rem;
-    font-family: 'Swistblnk Banthers', serif;
+/* CARDS */
+
+.cards-section {
+    width: 100%;
 }
 
-.user-greeting h1 span {
-    color: var(--brown);
-}
-
-.card-section h2 {
+.cards-section h2 {
     font-family: 'Swistblnk Banthers', serif;
     color: var(--brown)
 }
@@ -73,11 +88,29 @@
     display: flex;
     gap: 1rem;
     margin: 1rem 0;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+.cards::-webkit-scrollbar-track {
+    background: transparent
 }
 
 .card {
-    width: 60px;
-    height: 100px;
+    flex: 0 0 120px;
+    width: 120px;
+    height: 200px;
     background: linear-gradient(to bottom, var(--olive), #fff);
     border-radius: 5px;
 }
