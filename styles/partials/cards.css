@@ -1,0 +1,46 @@
+/* CARDS DE RECOMENDAÇÕES */
+
+.recomendations-section {
+    width: 100%;
+}
+
+.recomendations-section h2 {
+    font-family: 'Swistblnk Banthers', serif;
+    color: var(--olive)
+}
+
+.cards {
+    display: flex;
+    gap: 0.9rem;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+
+}
+
+.cards::-webkit-scrollbar-track {
+    background: transparent
+}
+
+.card {
+    width: 120px;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--olive), #fff);
+    border-radius: 10px;
+}
+
+.book-recomendation {
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+}

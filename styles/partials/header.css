@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     height: var(--header-height);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--olivy);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 100;
@@ -27,6 +27,7 @@
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
@@ -49,15 +50,20 @@
 }
 
 .search-box input {
+    height: 100%;
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.45rem 0;
     width: 240px;
     background: transparent;
 }
 
 .search-box .icon-button {
+    border-radius: 50%;
+    opacity: 65%;
     padding: 0.25rem;
+    padding-bottom: calc(0.25rem + 2px);
+    padding-right: calc(0.25rem + 2px);
 }

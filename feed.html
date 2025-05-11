@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./styles/partials/header.css" />
     <link rel="stylesheet" href="./styles/partials/buttons.css" />
     <link rel="stylesheet" href="./styles/partials/post.css" />
+    <link rel="stylesheet" href="./styles/partials/sidebar.css" />
+    <link rel="stylesheet" href="./styles/partials/cards.css" />
     <link rel="stylesheet" href="./styles/feed.css" />
     <link rel="icon" type="vector/svg" href="./assets/images/logo_small.svg" sizes="16x16" />
 
@@ -22,9 +24,9 @@
             <img src="./assets/images/logo_small.svg" alt="Literallis" />
           </a>
 
-          <!-- USER GREETING -->
+          <!-- Greeting -->
           <div class="user-greeting">
-            <h1>OI <span>JULIA</span></h1>
+            <h1>OI <span>RENAN</span></h1>
           </div>
 
           <ul class="nav-links">
@@ -39,13 +41,6 @@
               </div>
             </li>
           
-            <!-- Notificação -->
-            <li>
-              <button class="icon-button" title="Notificações">
-                <img src="./assets/images/icons/notification.svg" alt="Notification Icon" />
-              </button>
-            </li>
-          
             <!-- Mensagens -->
             <li>
               <button class="icon-button" title="Mensagens">
@@ -53,11 +48,17 @@
               </button>
             </li>
           
-            <!-- Sair -->
+            <!-- Notificação -->
             <li>
-              <button class="icon-button logout-btn" title="Sair">
-                <!-- Ícone de logout -->
-                <img src="./assets/images/icons/exit.svg" alt="Logout Icon" />
+              <button class="icon-button" title="Notificações">
+                <img src="./assets/images/icons/notification.svg" alt="Notification Icon" />
+              </button>
+            </li>
+          
+            <!-- Foto perfil -->
+            <li>
+              <button class="icon-button profile-btn" title="Foto de perfil">
+                <img src="./assets/images/pp/diego.jpg" alt="Foto de perfil" />
               </button>
             </li>
           </ul>
@@ -65,15 +66,14 @@
         </nav>
       </header>
 
-      <main class="feed-container">
+      <main class="main-container">
 
-        <!-- SIDEBAR -->
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="icon-logo"></div>
             <nav class="menu">
                 <button>Amigos</button>
                 <button>Comunidade</button>
-                <button>Eventos</button>
                 <button>Ofensiva</button>
                 <button>Livros</button>
             </nav>
@@ -84,46 +84,77 @@
             </div>
 
         </aside>
-
-        <!-- FEED PRINCIPAL -->
-        <section class="main-feed">
-
-            
-
-            <!-- CARDS -->
-            <div class="cards-section">
-                <h2>CARDS</h2>
-                <div class="cards">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+        
+        <!-- Cards de Recomendações -->
+        <section class="recomendations-section">
+            <h2>Recomendados</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="./assets/images/books/recBook6.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook2.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook8.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
             </div>
+        </section>
 
-            <!-- TABS -->
-            <div class="tabs">
-                <button class="tab" active>Social</button>
-                <button class="tab">Descubra</button>
-            </div>
+        <!-- Feed Switch -->
+        <div class="feed-switch-container">
+            <div class="div-line"></div>
+            <button class="feed-switch-option" active>Descobrir</button>
+            <button class="feed-switch-option">Amigos</button>
+            <button class="feed-switch-option">Eventos</button>
+            <div class="div-line"></div>
 
+        </div>
+
+        <!-- Main Feed -->
+        <section class="feed-container">
             <!-- POSTS PLACEHOLDERS -->
 
              <!-- POST 1 | EDUARDA -->
@@ -166,7 +197,7 @@
             </div>
 
             <!-- POST 2 | RAFAELA -->
-            <div class="post" data-post-id="1"> 
+            <div class="post" data-post-id="2"> 
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp2.jpg" alt="Foto do usuário" class="user-photo">
@@ -202,7 +233,7 @@
             </div>
 
             <!-- POST 3 | MANUEL -->
-            <div class="post" data-post-id="1">
+            <div class="post" data-post-id="3">
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp3.jpg" alt="Foto do usuário" class="user-photo">
@@ -238,7 +269,7 @@
             </div>
 
             <!-- POST 4 | EDINILSON -->
-            <div class="post" data-post-id="1">
+            <div class="post" data-post-id="4">
                 <div class="post-header">
                     <div class="user-container">
                         <img src="./assets/images/pp/pp4.jpg" alt="Foto do usuário" class="user-photo">

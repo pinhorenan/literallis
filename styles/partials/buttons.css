@@ -1,11 +1,17 @@
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 .icon-button {
     background: none;
     border: none;
-    padding: 0.4rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 0.4rem;
     border-radius: 8px;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
@@ -14,27 +20,34 @@
 .icon-button svg {
     width: 22px;
     height: 22px;
-    stroke: var(--brown); /* ou currentColor se preferir herdar do pai */
+    stroke: var(--brown);
 }
 
-/* hover com feedback sutil */
+.profile-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
 .icon-button:hover {
     background-color: rgba(0, 0, 0, 0.05);
     transform: scale(1.05);
 }
 
-/* acessibilidade extra */
 .icon-button:focus-visible {
     outline: 2px solid var(--olive);
     outline-offset: 2px;
 }
 
-.like-btn.active svg,
-.like-btn.active img {
+.like-btn.active {
+  animation: pop 0.3s ease;
+}
+
+.like-btn[active] svg,
+.like-btn[active] img {
     stroke: var(--olive);
     fill: var(--olive);
 }
-
 
 .btn-primary {
     background-color: var(--olive);
@@ -68,15 +81,18 @@
 
 .btn-primary:hover, .btn-more:hover { background-color: #5a5830; }
 
-/* Pop suave ao ativar */
-@keyframes pop {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.2); }
-    100% { transform: scale(1); }
-  }
-  
-  /* Aplique a animação ao adicionar .active */
-  .like-btn.active {
-    animation: pop 0.3s ease;
-  }
+.feed-switch-option {
+    padding: 0.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feed-switch-option[active]
+.feed-switch-option.active {
+    background: var(--olive);
+    color: white;
+}
   

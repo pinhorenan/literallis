@@ -1,0 +1,33 @@
+.sidebar {
+    position: fixed;
+    top: calc(var(--header-height + 1px));
+    left: 0;
+    height: calc(100vh - var(--header-height) - 1px);
+    width: 240px;
+    background-color: var(--olivy);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    z-index: 90;
+}
+
+.sidebar .menu button, .sidebar .actions .olive-btn {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid var(--olive);
+    background: white;
+    color: var(--olive);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.sidebar .olive-btn {
+    background: var(--olive);
+    color: white;
+    border: none;
+    font-weight: bold;
+}
