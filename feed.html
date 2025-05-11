@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./styles/partials/base.css" />
     <link rel="stylesheet" href="./styles/partials/header.css" />
+    <link rel="stylesheet" href="./styles/partials/footer.css" />
     <link rel="stylesheet" href="./styles/partials/buttons.css" />
     <link rel="stylesheet" href="./styles/partials/post.css" />
     <link rel="stylesheet" href="./styles/partials/sidebar.css" />
@@ -15,32 +16,42 @@
     <link rel="stylesheet" href="./styles/feed.css" />
     <link rel="icon" type="vector/svg" href="./assets/images/logo_small.svg" sizes="16x16" />
 
+    <script src="./scripts/sidebar.js"   defer></script>
+<script src="./scripts/likes.js"     defer></script>
+    <script src="./scripts/feedSwitch.js"defer></script>
+
+
     <title>Literalis - Página Inicial</title>
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar">
-          <a href="index.html" class="logo">
-            <img src="./assets/images/logo_small.svg" alt="Literallis" />
-          </a>
+            <div class="left-navbar">
+                <button id="hamburger"
+                    class="icon-button hamburger-btn"
+                    aria-label="Abrir menu"
+                    aria-expanded="false">
+                    <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3"  y1="6"  x2="21" y2="6"/>
+                        <line x1="3"  y1="12" x2="21" y2="12"/>
+                        <line x1="3"  y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
 
-          <!-- Greeting -->
-          <div class="user-greeting">
-            <h1>OI <span>RENAN</span></h1>
-          </div>
+                <a href="index.html" class="logo">
+                    <img src="./assets/images/logo_small.svg" alt="Literallis" />
+                </a>
+    
+            </div>
 
-          <ul class="nav-links">
-
-            <!-- Barra de pesquisa estática -->
-            <li>
-              <div class="search-box">
+            <div class="search-box">
                 <input type="text" placeholder="Pesquisar…" />
                 <button class="icon-button search-btn" title="Pesquisar">
                     <img src="./assets/images/icons/search.svg" alt="Search Icon" />
                 </button>
-              </div>
-            </li>
-          
+            </div>
+
+          <ul class="nav-links">
             <!-- Mensagens -->
             <li>
               <button class="icon-button" title="Mensagens">
@@ -62,25 +73,38 @@
               </button>
             </li>
           </ul>
-          
-        </nav>
       </header>
 
       <main class="main-container">
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="icon-logo"></div>
+
+            <div class="user-greeting">
+                <h1>OI <span>RENAN</span></h1>
+            </div>
+
             <nav class="menu">
                 <button>Amigos</button>
                 <button>Comunidade</button>
-                <button>Ofensiva</button>
-                <button>Livros</button>
+                <button>Estante</button>
             </nav>
+            
+            <div class="line-div">
+
+            </div>
 
             <div class="actions">
-                <button class="olive-btn">Atualizar leituras</button>
                 <button class="olive-btn">Novo livro</button>
+                <div class="recent-books">
+                    <h3>Atualizar leituras: </h3>
+                    <div class="book">
+                        <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-cover recent-book">
+                        <div class="progress-bar"><div style="width: 36%"></div></div>
+                        <p class="progress-number">346/983</p>
+                    </div>
+
+                </div>
             </div>
 
         </aside>
@@ -376,60 +400,15 @@
         </section>
       </main>
 
-      <script>
-        (function() {
-          // Chaves usadas no localStorage
-          const STORAGE_KEY_LIKES    = 'literalis_post_likes';
-          const STORAGE_KEY_COMMENTS = 'literalis_post_comments';
-        
-          // Carrega do localStorage ou inicializa objeto vazio
-          let likesData    = JSON.parse(localStorage.getItem(STORAGE_KEY_LIKES)    || '{}');
-          let commentsData = JSON.parse(localStorage.getItem(STORAGE_KEY_COMMENTS) || '{}');
-        
-          // Aplica estado salvo ao carregar a página
-          document.querySelectorAll('.post').forEach(post => {
-            const id = post.dataset.postId;
-            const likeBtn    = post.querySelector('.like-btn');
-            const commentBtn = post.querySelector('.comment-btn');
-        
-            if (likesData[id])    likeBtn.classList.add('active');
-            if (commentsData[id]) commentBtn.classList.add('active');
-          });
-        
-          // Handler genérico de toggle
-          function setupToggle(selector, storageObj, storageKey) {
-            document.querySelectorAll(selector).forEach(btn => {
-              btn.addEventListener('click', () => {
-                const post = btn.closest('.post');
-                const id   = post.dataset.postId;
-                const isActive = btn.classList.toggle('active');
-                storageObj[id] = isActive;
-                localStorage.setItem(storageKey, JSON.stringify(storageObj));
-              });
-            });
-          }
-        
-          // Liga os listeners
-          setupToggle('.like-btn',    likesData,    STORAGE_KEY_LIKES);
-          setupToggle('.comment-btn', commentsData, STORAGE_KEY_COMMENTS);
-        })();
-        </script>
-        
-        <script>
-            /* Exclusividade no feed-switch */
-            document.querySelectorAll('.feed-switch-option').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // remove estado de todos
-                    document.querySelectorAll('.feed-switch-option').forEach(b => {
-                        b.classList.remove('active'); b.removeAttribute('active');
-                    });
-                    // ativa somente o clicado
-                    btn.classList.add('active');
-                    btn.setAttribute('active','');
-                });
-            });
-        </script>
-
-        
+      <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Sobre nós</a>
+                <a href="#">Termos de uso</a>
+                <a href="#">Política de privacidade</a>
+            </div>
+            <p>&copy; 2025 Literalis. Todos os direitos reservados.</p>
+        </div>
+      </footer>
 </body>
 </html>

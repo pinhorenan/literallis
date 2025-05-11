@@ -1,6 +1,10 @@
 .site-header {
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
     height: var(--header-height);
     background: var(--olivy);
     backdrop-filter: blur(6px);
@@ -8,20 +12,26 @@
     z-index: 100;
 }
 
-.navbar {
-    height: 100%;
-    max-width: 100vw;
-    margin: 0 240px;
-    padding: 1rem 0;
+.left-navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
+    width: 100%;
+    gap: 2rem;
 }
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: .25rem;
+}
+
+.hamburguer-btn svg { stroke: var(--olive); }
 
 .navbar .logo img {
     height: 40px;
-    box-shadow: none;
 }
 
 .nav-links {
@@ -31,7 +41,6 @@
     gap: 2rem;
     margin: 0;
     padding: 0;
-    margin-left: auto;
 }
 
 .nav-links a {
@@ -41,6 +50,11 @@
 }
 
 .search-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: calc(var(--header-height) * 0.6);
     display: flex;
     align-items: center;
     background: #fff;
@@ -50,20 +64,20 @@
 }
 
 .search-box input {
+    flex: 1;
     height: 100%;
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: 0.45rem 0;
-    width: 240px;
     background: transparent;
 }
 
 .search-box .icon-button {
+    padding: 0.25rem;
     border-radius: 50%;
     opacity: 65%;
-    padding: 0.25rem;
     padding-bottom: calc(0.25rem + 2px);
     padding-right: calc(0.25rem + 2px);
 }
