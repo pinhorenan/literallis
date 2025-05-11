@@ -24,9 +24,61 @@
     width: 240px;
   }
 
+  /* Posts */
+
+  .main-container {
+    margin: 2rem;
+  }
+
+  .post {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--olivy);
+    border-radius: 7px;
+  }
+
+  .post-body {
+    flex-direction: row;
+    flex: 1 2;
+    max-height: none;
+    gap: 0.5rem;
+  }
+  .post-body .book-info {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font-size: 1rem;
+    border: none;
+  }
   .book-cover {
-    max-width: 160px;            /* reduz imagem do livro */
+    max-width: auto;
     height: auto;
+  }
+  .post-body .comment {
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+  }
+  .post-footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0;
+    margin-top: 0;
+    border: none;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 4rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -36,26 +88,27 @@
     margin: 0 1.5rem;
   }
 
-  /* Recomendações: troca flex por grid para encaixar melhor */
   .recomendations-section .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
     overflow: visible;        /* evita cortes bruscos */
   }
+
   .recomendations-section .card {
-    flex: none;
     width: 100%;
     height: auto;
   }
 
   /* Header */
   .search-box {
+    display: none;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
     padding: 0 0.5rem;
   }
+  
   .nav-links {
     display: none;
   }
@@ -78,34 +131,109 @@
     flex-direction: column;
     gap: 0.4rem;
   }
+
+  /* Posts */
+  .post-body {
+    flex-direction: row;
+    max-height: none;
+    margin-top: 0;
+  }
+
+  .post-body .book-info {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .book-cover {
+    width: auto;
+    height: auto;
+  }
+
+  .progress-bar {
+    width: 100%;
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+
+  .post-body .comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .post-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0;
+    padding: 0;
+    margin-top: 0;
+    border: none;
+  }
+
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer a, footer p {
+    font-size: 0.8rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 /* Celulares médios (até 576px) */
 @media only screen and (max-width: 576px) {
+
+  /* Header */
+  .logo img {
+    display: none;
+  }
+
   .main-container {
     margin: 0 1rem;
   }
 
-  /* Recomendações: 2 colunas no grid, cards empilham melhor */
-  .recomendations-section .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .recomendations-section .card {
-    padding: 0.5rem;
+  .feed-switch-container {
+    flex-direction: row;
+    gap: 0.2rem;
   }
   
   /* Posts */
+  .post {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--olivy);
+    border-radius: 7px;
+  }
   .post-body {
     flex-direction: column;
+    max-height: none;
+    gap: 0.5rem;
   }
   .post-body .book-info {
     width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--olive);
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
   }
   .user-photo {
     width: 40px;
@@ -125,18 +253,5 @@
   .hero-content {
     width: 100%;
     padding: 1rem 0;
-  }
-}
-
-/* Celulares pequenos (até 400px) */
-@media only screen and (max-width: 400px) {
-  /* Recomendações: 1 coluna, para maximizar legibilidade */
-  .recomendations-section .cards {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .search-box {
-    font-size: 0.9rem;        /* reduz texto para caber */
   }
 }
