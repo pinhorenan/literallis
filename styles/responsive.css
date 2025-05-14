@@ -1,0 +1,77 @@
+/* -------------------------------------------------
+   BREAKPOINT: ≤ 1300 px
+   ------------------------------------------------ */
+@media (max-width: 1300px) {
+  .main-container { margin-inline: clamp(1rem, 4vw, 4rem); }
+  .cards { gap: .5rem; }
+  .card  { flex: 0 0 140px; width: 140px; height: auto; }
+
+  .search-box { width: 360px; }
+  .nav-links  { gap: .8rem; }
+  .sidebar    { width: 240px; border-right: 1px solid var(--olivy); }
+
+  .post { padding: .5rem 1rem; }
+  .post-body { flex-direction: row; gap: .5rem; }
+  .book-info { border: none; padding: .5rem 1rem; }
+
+  footer { padding: 1.5rem 4rem; flex-direction: row; justify-content: space-between; }
+}
+
+/* -------------------------------------------------
+   BREAKPOINT: ≤ 768 px
+   ------------------------------------------------ */
+@media (max-width: 768px) {
+  .main-container { margin-inline: 1.5rem; }
+
+  /* Header simplificado */
+  .search-box, .nav-links { display: none; }
+
+  /* Sidebar hamburger */
+  .sidebar            { transform: translateX(-100%); }
+  .sidebar.open       { transform: translateX(0); }
+
+  .feed-switch-container { gap: .2rem; }
+
+  .post-body { grid-template-columns: 1fr; }
+
+  .book-info { order: 2; margin-top: var(--gap-lg); border: none; font-size: .875rem; padding: 0; }
+
+  .post {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .post-content {
+    order: 1;
+  }
+
+  .post-footer
+  { 
+    flex-direction: column; 
+    gap: 1rem;
+    padding: 1rem 0; 
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  /* Footer empilhado */
+  footer { padding: 1.5rem .5rem; flex-direction: column; align-items: center; }
+  footer a, footer p { font-size: .8rem; }
+  .footer-content { flex-direction: column; gap: .25rem; }
+  .footer-links { flex-direction: column; gap: .5rem; }
+}
+
+/* -------------------------------------------------
+   BREAKPOINT: ≤ 576 px
+   ------------------------------------------------ */
+@media (max-width: 576px) {
+  .logo img { display: none; }
+  .main-container { margin: 1rem; }
+
+  .cards { gap: .5rem; }
+
+  .post { padding: 1rem; }
+  .post-body { flex-direction: column; gap: .5rem; }
+  .user-photo { width: 40px; height: 40px; }
+}
+

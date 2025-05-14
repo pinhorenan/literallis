@@ -4,116 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="./styles/partials/base.css" />
-    <link rel="stylesheet" href="./styles/partials/header.css" />
-    <link rel="stylesheet" href="./styles/partials/footer.css" />
-    <link rel="stylesheet" href="./styles/partials/buttons.css" />
-    <link rel="stylesheet" href="./styles/partials/post.css" />
-    <link rel="stylesheet" href="./styles/partials/sidebar.css" />
-    <link rel="stylesheet" href="./styles/partials/cards.css" />
-    <link rel="stylesheet" href="./styles/feed.css" />
-    <link rel="stylesheet" href="./styles/partials/responsive.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/core.css"/>
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+
     <link rel="icon" type="vector/svg" href="./assets/images/logo_small.svg" sizes="16x16" />
 
+    <!-- Scripts -->
     <script src="./scripts/sidebar.js"   defer></script>
-<script src="./scripts/likes.js"     defer></script>
+    <script src="./scripts/likes.js"     defer></script>
     <script src="./scripts/feedSwitch.js"defer></script>
 
 
     <title>Literalis - Página Inicial</title>
 </head>
 <body>
-    <header class="site-header">
-            <div class="left-navbar">
-                <button id="hamburger"
+    <!-- ======================== HEADER ======================== -->
+    <header class="site-header" role="banner">
+        <div class="left-navbar">
+            <button id="hamburger"
                     class="icon-button hamburger-btn"
                     aria-label="Abrir menu"
                     aria-expanded="false">
-                    <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" fill="none"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3"  y1="6"  x2="21" y2="6"/>
-                        <line x1="3"  y1="12" x2="21" y2="12"/>
-                        <line x1="3"  y1="18" x2="21" y2="18"/>
-                    </svg>
+                <!-- hamburguer icon -->  
+                <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3"  y1="6"  x2="21" y2="6"/>
+                    <line x1="3"  y1="12" x2="21" y2="12"/>
+                    <line x1="3"  y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+            <a href="index.html" class="logo" aria-label="Página inicial Literaliss">
+                <img src="./assets/images/logo_small.svg" alt="Literallis" />
+            </a>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box" role="search">
+            <input type="search" placeholder="Pesquisar…" aria-label="Pesquisar" />
+            <button class="icon-button search-btn" title="Pesquisar">
+                <img src="./assets/images/icons/search.svg" alt="Search Icon" aria-hidden="true" />
+            </button>
+        </div>
+
+        <!-- ícones usuário -->
+        <ul class="nav-links" role="navigation" aria-label="Links rápidos">
+            <li>
+                <button class="icon-button" title="Mensagens">
+                    <img src="./assets/images/icons/message.svg" alt="Ícon de mensagens" />
                 </button>
-
-                <a href="index.html" class="logo">
-                    <img src="./assets/images/logo_small.svg" alt="Literallis" />
-                </a>
-    
-            </div>
-
-            <div class="search-box">
-                <input type="text" placeholder="Pesquisar…" />
-                <button class="icon-button search-btn" title="Pesquisar">
-                    <img src="./assets/images/icons/search.svg" alt="Search Icon" />
+            </li>
+            <li>
+                <button class="icon-button" title="Notificações">
+                    <img src="./assets/images/icons/notification.svg" alt="Ícone de notificação" />
                 </button>
-            </div>
-
-          <ul class="nav-links">
-            <!-- Mensagens -->
-            <li>
-              <button class="icon-button" title="Mensagens">
-                <img src="./assets/images/icons/message.svg" alt="Messages Icon" />
-              </button>
             </li>
-          
-            <!-- Notificação -->
             <li>
-              <button class="icon-button" title="Notificações">
-                <img src="./assets/images/icons/notification.svg" alt="Notification Icon" />
-              </button>
+                <button class="icon-button profile-btn" title="Perfil">
+                    <img src="./assets/images/pp/diego.jpg" alt="Sua foto de perfil" />
+                </button>
             </li>
-          
-            <!-- Foto perfil -->
-            <li>
-              <button class="icon-button profile-btn" title="Foto de perfil">
-                <img src="./assets/images/pp/diego.jpg" alt="Foto de perfil" />
-              </button>
-            </li>
-          </ul>
-      </header>
+        </ul>
+    </header>  
 
-      <main class="main-container">
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-
+    <!-- ======================== MAIN ======================== -->
+    <main class="main-container">
+        <!-- ============ SIDEBAR -->
+        <aside id="sidebar" class="sidebar" aria-label="Menu Lateral">
+            <p class="sr-only">Menu principal</p>
             <div class="user-greeting">
-                <h1>OI <span>RENAN</span></h1>
+                <h1>Oi <span>Renan</span></h1>
             </div>
-
             <nav class="menu">
-                <button>Amigos</button>
-                <button>Comunidade</button>
-                <button>Estante</button>
+                <button type="button">Amigos</button>
+                <button type="button">Comunidade</button>
+                <button type="button">Estante</button>
             </nav>
-            
-            <div class="line-div">
-
-            </div>
-
-            <div class="actions">
-                <button class="olive-btn">Novo livro</button>
-                <div class="recent-books">
+            <div class="line-div" aria-hidden="true"></div>
+            <section class="actions">
+                <button class="olive-btn" type="button">Novo livro</button>
                     <h3>Atualizar leituras: </h3>
-                    <div class="book">
-                        <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-cover recent-book">
-                        <div class="progress-bar"><div style="width: 36%"></div></div>
-                        <p class="progress-number">346/983</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </aside>
-        
-        <!-- Cards de Recomendações -->
-        <section class="recomendations-section">
+                    <article class="book">
+                        <img src="./assets/images/books/recBook17.jpg" class="book-cover recent-book" alt="Capa do livro recente">
+                        <div class="progress-bar"><div style="width:36%"></div></div>
+                        <p class="progress-number">346/983 páginas</p>
+                    </article>
+            </section>
+        </aside>   
+    
+        <!-- ============ CARDS -->        
+        <section class="recommended-container" aria-label="Leituras recomendadas">
             <h2>Leituras Recomendadas</h2>
             <div class="cards">
+                <!-- cards geradis a partir de json futuramente -->
+                <!-- exemplo estático -->
+                <!--<figure class="card"> 
+                        <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation"> -->
                 <div class="card">
                     <img src="./assets/images/books/recBook6.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
@@ -123,298 +113,404 @@
                 <div class="card">
                     <img src="./assets/images/books/recBook8.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
+                    <div class="card">
+                        <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-                <div class="card">
-                    <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
-                </div>
-            </div>
-        </section>
-
-        <!-- Feed Switch -->
-        <div class="feed-switch-container">
-            <div class="div-line"></div>
-            <button class="feed-switch-option" active>Descobrir</button>
-            <button class="feed-switch-option">Amigos</button>
-            <button class="feed-switch-option">Eventos</button>
-            <div class="div-line"></div>
-
-        </div>
-
-        <!-- Main Feed -->
-        <section class="feed-container">
-            <!-- POSTS PLACEHOLDERS -->
-
-             <!-- POST 1 | EDUARDA -->
-            <div class="post" data-post-id="1">
-                <div class="post-header">
+        </section> 
+    
+        <!-- ============ FEED-SWITCH -->
+        <div class="feed-switch-container" role="group" aria-label="Alternar entre as opções de feed">
+            <div class="div-line" aria-hidden="true"></div>
+            <button class="feed-switch-option active" data-feed="discover" active>Descobrir</button>
+            <button class="feed-switch-option" data-feed="friends">Amigos</button>
+            <button class="feed-switch-option" data-feed="events">Eventos</button>
+            <div class="div-line" aria-hidden="true"></div>
+        </div> 
+    
+        <!-- ================ FEED -->
+        <section class="feed-container" aria-live="polite">
+            <article class="post" data-post-id="1">
+                <header class="post-header">
                     <div class="user-container">
-                        <img src="./assets/images/pp/pp1.jpg" alt="Foto do usuário" class="user-photo">
+                        <img src="./assets/images/pp/pp1.jpg" class="user-photo" alt="Foto de usuário">
                         <strong>Eduarda</strong>
                     </div>
-                    <span class="post-time">
-                        há 30 minutos
-                    </span>
-                </div>
+                    <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+                </header>
+
                 <div class="post-body">
-                    <p class="comment">
-                        Milton reconta a queda de Adão e Eva com versos épicos que continuam
-                        poderosos mesmo em tradução. A retórica de Satanás é o ponto alto — é
-                        impossível não se encantar com a audácia do personagem. Leitura
-                        densa, mas cada canto compensa o esforço.
+                    <p class="post-text">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                        mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                        encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                        o esforço.
                     </p>
-                    <div class="book-info">
-                        <img src="./assets/images/books/book1.jpg" alt="Capa do livro" class="book-cover">
+
+                    <aside class="book-info" aria-label="Informações do livro">
+                        <img src="./assets/images/books/book1.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
                         <div class="book-details">
-                            <h3><strong>Paraíso Perdido</strong></h3>
+                            <h3>Paraíso Perdido</h3>
                             <p><strong>Autor:</strong> John Milton</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 1667</p>
-                            <div class="progress-bar"><div style="width: 47%"></div></div>
-                            <p><strong>47%</strong></p>
+                            <p><strong>Ano:</strong> 1667</p>
+                            <div class="progress-bar"><div style="width:78%"></div></div>
+                            <p><strong>78%</strong> lido</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="comments-preview">
+                        <div class="comment">
+                            <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                            <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                        </div>
+                        <div class="comment-number">
+                            <p><strong>+1</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="post-footer">
-                    <button class="icon-button like-btn" title="Curtir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-heart">
-                            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
-                        </svg>
-                    <button class="icon-button comment-btn" title="Comentar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-comment">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
-                                8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
 
-            <!-- POST 2 | RAFAELA -->
-            <div class="post" data-post-id="2"> 
-                <div class="post-header">
-                    <div class="user-container">
-                        <img src="./assets/images/pp/pp2.jpg" alt="Foto do usuário" class="user-photo">
-                        <strong>Rafaela</strong>
+                    <div class="post-actions">
+                        <input
+                            type="text"
+                            class="comment-input"
+                            placeholder="Escreva um comentário…"
+                            aria-label="Escreva um comentário"
+                        />
+                        
+                        <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                            <!-- SVG do balão de comentário -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                            </svg>
+                        </button>
+
+                        <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                            <!-- SVG do coração -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                            </svg>
+                        </button>
                     </div>
-                    <span class="time">há 48 minutos</span>
-                </div>
+                </footer>
+            </article>
+
+            <article class="post" data-post-id="2">
+                <header class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp1.jpg" class="user-photo" alt="Foto de usuário">
+                        <strong>Eduarda</strong>
+                    </div>
+                    <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+                </header>
+
                 <div class="post-body">
-                    <p class="comment">
-                        A jornada de Dante por Inferno, Purgatório e Paraíso surpreende pela
-                        atualidade das críticas políticas e pela musicalidade do terceto
-                        encadeado. Virgílio como guia é simplesmente inesquecível.
+                    <p class="post-text">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                        mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                        encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                        o esforço.
                     </p>
-                    <div class="book-info">
-                        <img src="./assets/images/books/book2.jpg" alt="Capa do livro" class="book-cover">
-                        <div class="info">
-                            <h3><strong>A Divina Comédia</strong></h3>
-                            <p><strong>Autor:</strong> Dante Alighieri</p>
+
+                    <aside class="book-info" aria-label="Informações do livro">
+                        <img src="./assets/images/books/book2.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
+                        <div class="book-details">
+                            <h3>Paraíso Perdido</h3>
+                            <p><strong>Autor:</strong> John Milton</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 1320</p>
-                            <div class="progress-bar"><div style="width: 15%"></div></div>
-                            <p><strong>15%</strong></p>
+                            <p><strong>Ano:</strong> 1667</p>
+                            <div class="progress-bar"><div style="width:47%"></div></div>
+                            <p><strong>47%</strong> lido</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="comments-preview">
+                        <div class="comment">
+                            <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                            <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                        </div>
+                        <div class="comment-number">
+                            <p><strong>+4</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="post-footer">
-                    <button class="icon-button like-btn" title="Curtir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-heart">
-                            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
-                        </svg>
-                    <button class="icon-button comment-btn" title="Comentar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-comment">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
-                                8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
 
-            <!-- POST 3 | MANUEL -->
-            <div class="post" data-post-id="3">
-                <div class="post-header">
-                    <div class="user-container">
-                        <img src="./assets/images/pp/pp3.jpg" alt="Foto do usuário" class="user-photo">
-                        <strong>Manuel</strong>
+                    <div class="post-actions">
+                        <input
+                            type="text"
+                            class="comment-input"
+                            placeholder="Escreva um comentário…"
+                            aria-label="Escreva um comentário"
+                        />
+                        
+                        <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                            <!-- SVG do balão de comentário -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                            </svg>
+                        </button>
+
+                        <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                            <!-- SVG do coração -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                            </svg>
+                        </button>
                     </div>
-                    <span class="time">Há 3 horas</span>
-                </div>
+                </footer>
+            </article>
+
+            <article class="post" data-post-id="3">
+                <header class="post-header">
+                    <div class="user-container">
+                        <img src="./assets/images/pp/pp3.jpg" class="user-photo" alt="Foto de usuário">
+                        <strong>Robertilda</strong>
+                    </div>
+                    <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+                </header>
+
                 <div class="post-body">
-                    <p class="comment">
-                        Dostoiévski domina o debate moral — o capítulo do “Grande Inquisidor”
-                        me deixou sem fôlego. Filosofia, religião e crime se misturam num
-                        romance que vale cada uma das muitas páginas.
-                    </p>                    
-                    <div class="book-info">
-                        <img src="./assets/images/books/book3.jpg" alt="Capa do livro" class="book-cover">
-                        <div class="info">
-                            <h3><strong>Os Irmãos Karamázov</strong></h3>
-                            <p><strong>Autor:</strong> Fiódor Dostoiévski</p>
+                    <p class="post-text">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                        mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                        encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                        o esforço.
+                    </p>
+
+                    <aside class="book-info" aria-label="Informações do livro">
+                        <img src="./assets/images/books/book3.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
+                        <div class="book-details">
+                            <h3>Paraíso Perdido</h3>
+                            <p><strong>Autor:</strong> John Milton</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 1880</p>
-                            <div class="progress-bar"><div style="width: 70%"></div></div>
-                            <p><strong>70%</strong></p>
+                            <p><strong>Ano:</strong> 1667</p>
+                            <div class="progress-bar"><div style="width:47%"></div></div>
+                            <p><strong>47%</strong> lido</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="comments-preview">
+                        <div class="comment">
+                            <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                            <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                        </div>
+                        <div class="comment-number">
+                            <p><strong>+4</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="post-footer">
-                    <button class="icon-button like-btn" title="Curtir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-heart">
-                            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
-                        </svg>
-                    <button class="icon-button comment-btn" title="Comentar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-comment">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
-                                8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/>
-                        </svg>
-                    </button>
-                </div>   
-            </div>
 
-            <!-- POST 4 | EDINILSON -->
-            <div class="post" data-post-id="4">
-                <div class="post-header">
+                    <div class="post-actions">
+                        <input
+                            type="text"
+                            class="comment-input"
+                            placeholder="Escreva um comentário…"
+                            aria-label="Escreva um comentário"
+                        />
+                        
+                        <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                            <!-- SVG do balão de comentário -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                            </svg>
+                        </button>
+
+                        <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                            <!-- SVG do coração -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="post" data-post-id="4">
+                <header class="post-header">
                     <div class="user-container">
-                        <img src="./assets/images/pp/pp4.jpg" alt="Foto do usuário" class="user-photo">
+                        <img src="./assets/images/pp/pp4.jpg" class="user-photo" alt="Foto de usuário">
                         <strong>Edinilson</strong>
                     </div>
-                    <span class="time">Ontem</span>
-                </div>
+                    <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+                </header>
+
                 <div class="post-body">
-                    <p class="comment">
-                        Kafka atinge o absurdo logo na primeira frase: um caixeiro viajante
-                        acorda inseto. Curtinho, mas perturbador — o peso da culpa e da
-                        solidão fica martelando bem depois do fim.
+                    <p class="post-text">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                        mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                        encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                        o esforço.
                     </p>
-                    <div class="book-info">
-                        <img src="./assets/images/books/book4.jpg" alt="Capa do livro" class="book-cover">
-                        <div class="info">
-                            <h3><strong>A Metamorfose</strong></h3>
-                            <p><strong>Autor:</strong> Franz Kafka</p>
-                            <p><strong>Editora:</strong> Companhia das Letras</p>
-                            <p><strong>Ano de lançamento:</strong> 1915</p>
-                            <div class="progress-bar"><div style="width: 100%"></div></div>
-                            <p><strong>100%</strong></p>
+
+                    <aside class="book-info" aria-label="Informações do livro">
+                        <img src="./assets/images/books/book4.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
+                        <div class="book-details">
+                            <h3>Paraíso Perdido</h3>
+                            <p><strong>Autor:</strong> John Milton</p>
+                            <p><strong>Editora:</strong> Editora 34</p>
+                            <p><strong>Ano:</strong> 1667</p>
+                            <div class="progress-bar"><div style="width:47%"></div></div>
+                            <p><strong>47%</strong> lido</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="comments-preview">
+                        <div class="comment">
+                            <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                            <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                        </div>
+                        <div class="comment-number">
+                            <p><strong>+4</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="post-footer">
-                    <button class="icon-button like-btn" title="Curtir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-heart">
-                            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
-                        </svg>
-                    <button class="icon-button comment-btn" title="Comentar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-comment">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
-                                8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
 
-            <!-- POST 5 | BATATILSON -->
-            <div class="post" data-post-id="5"> 
+                    <div class="post-actions">
+                        <input
+                            type="text"
+                            class="comment-input"
+                            placeholder="Escreva um comentário…"
+                            aria-label="Escreva um comentário"
+                        />
+                        
+                        <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                            <!-- SVG do balão de comentário -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                            </svg>
+                        </button>
 
-                <div class="post-header">
+                        <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                            <!-- SVG do coração -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="post" data-post-id="5">
+                <header class="post-header">
                     <div class="user-container">
-                        <img src="./assets/images/pp/pp5.jpg" alt="Foto do usuário" class="user-photo">
+                        <img src="./assets/images/pp/pp5.jpg" class="user-photo" alt="Foto de usuário">
                         <strong>Batatilson</strong>
                     </div>
-                    <span class="time">há 4 dias</span>
-                </div>
+                    <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+                </header>
+
                 <div class="post-body">
-                    <p class="comment">
-                        Tolstói constrói personagens com tanta vida que a história parece
-                        fofoca de amigos próximos. O contraste entre o drama de Anna e a
-                        busca espiritual de Liévyn cria uma narrativa intensa e, ao mesmo
-                        tempo, reflexiva.
+                    <p class="post-text">
+                        Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                        mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                        encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                        o esforço.
                     </p>
-                    <div class="book-info">
-                        <img src="./assets/images/books/book5.jpg" alt="Capa do livro" class="book-cover">
+
+                    <aside class="book-info" aria-label="Informações do livro">
+                        <img src="./assets/images/books/book5.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
                         <div class="book-details">
-                            <h3><strong>Anna Kariênina</strong></h3>
-                            <p><strong>Autor:</strong> Lev Tolstói</p>
+                            <h3>Paraíso Perdido</h3>
+                            <p><strong>Autor:</strong> John Milton</p>
                             <p><strong>Editora:</strong> Editora 34</p>
-                            <p><strong>Ano de lançamento:</strong> 1877</p>
-                            <div class="progress-bar"><div style="width: 93%"></div></div>
-                            <p><strong>93%</strong></p>
+                            <p><strong>Ano:</strong> 1667</p>
+                            <div class="progress-bar"><div style="width:47%"></div></div>
+                            <p><strong>47%</strong> lido</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="comments-preview">
+                        <div class="comment">
+                            <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                            <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                        </div>
+                        <div class="comment-number">
+                            <p><strong>+4</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="post-footer">
-                    <button class="icon-button like-btn" title="Curtir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-heart">
-                            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
-                        </svg>
-                    </button>
-                    <button class="icon-button comment-btn" title="Comentar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-comment">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
-                                8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
 
-        </section>
-      </main>
+                    <div class="post-actions">
+                        <input
+                            type="text"
+                            class="comment-input"
+                            placeholder="Escreva um comentário…"
+                            aria-label="Escreva um comentário"
+                        />
+                        
+                        <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                            <!-- SVG do balão de comentário -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                            </svg>
+                        </button>
 
-      <footer>
+                        <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                            <!-- SVG do coração -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+    </main> 
+    
+    <!-- ================================================= FOOTER -->
+    <footer>
         <div class="footer-content">
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Rodapé">
                 <a href="#">Sobre nós</a>
                 <a href="#">Termos de uso</a>
                 <a href="#">Política de privacidade</a>
-            </div>
-            <p>&copy; 2025 Literalis. Todos os direitos reservados.</p>
+            </nav>
+            <p>&copy; 2025 Literalis — todos os direitos reservados.</p>
         </div>
-      </footer>
+    </footer>
 </body>
 </html>
