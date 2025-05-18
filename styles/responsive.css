@@ -18,17 +18,22 @@
 }
 
 /* -------------------------------------------------
+   BREAKPOINT: ≤ 1024 px
+   ------------------------------------------------ */
+@media (max-width: 1024px) {
+
+  .sidebar            { transform: translateX(-100%); transition: transform .3s ease; }
+  .sidebar.open       { transform: translateX(0); box-shadow: 2px 0 8px rgb(0 0 0 / .25); }
+  .hamburger-btn      { display: inline-flex;}
+}
+/* -------------------------------------------------
    BREAKPOINT: ≤ 768 px
    ------------------------------------------------ */
 @media (max-width: 768px) {
   .main-container { margin-inline: 1.5rem; }
 
-  /* Header simplificado */
-  .search-box, .nav-links { display: none; }
-
-  /* Sidebar hamburger */
-  .sidebar            { transform: translateX(-100%); }
-  .sidebar.open       { transform: translateX(0); }
+  .search-box, 
+  .nav-links { display: none; }
 
   .feed-switch-container { gap: .2rem; }
 

@@ -20,4 +20,12 @@
       toggle();
     }
   });
+
+  window.addEventListener('resize' , () => {
+    if (window.innerWidth > 1024) {
+      sidebar.classList.remove('open');
+      body.classList.remove('sidebar-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  })
 })();

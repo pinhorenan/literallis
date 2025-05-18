@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/core.css"/>
+    <link rel="stylesheet" href="./styles/base.css"/>
+    <link rel="stylesheet" href="./styles/layout.css"/>
     <link rel="stylesheet" href="./styles/components.css" />
     <link rel="stylesheet" href="./styles/responsive.css" />
-
     <link rel="icon" type="vector/svg" href="./assets/images/logo_small.svg" sizes="16x16" />
 
     <!-- Scripts -->
@@ -82,7 +82,9 @@
             <nav class="menu">
                 <button type="button">Amigos</button>
                 <button type="button">Comunidade</button>
-                <button type="button">Estante</button>
+                <a href="./shelf.html">
+                    <button type="button">Estante</button>
+                </a>
             </nav>
             <div class="line-div" aria-hidden="true"></div>
             <section class="actions">
@@ -100,10 +102,6 @@
         <section class="recommended-container" aria-label="Leituras recomendadas">
             <h2>Leituras Recomendadas</h2>
             <div class="cards">
-                <!-- cards geradis a partir de json futuramente -->
-                <!-- exemplo estático -->
-                <!--<figure class="card"> 
-                        <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation"> -->
                 <div class="card">
                     <img src="./assets/images/books/recBook6.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
@@ -113,49 +111,49 @@
                 <div class="card">
                     <img src="./assets/images/books/recBook8.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
-                    <div class="card">
-                        <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
-                    </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
                 </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+                <div class="card">
+                    <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
+                </div>
+            </div>
         </section> 
     
         <!-- ============ FEED-SWITCH -->
@@ -169,6 +167,7 @@
     
         <!-- ================ FEED -->
         <section class="feed-container" aria-live="polite">
+            
             <article class="post" data-post-id="1">
                 <header class="post-header">
                     <div class="user-container">
