@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="shortcut icon" href="/assets/images/logo_small.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/components.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  
+  
+  <link rel="stylesheet" href="/styles/pages/feed.css">
+  
+  
+  <link rel="stylesheet" href="/styles/responsive.css">
+
+  <title>Literalis — Feed | Literalis</title>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+  <div class="left-navbar">
+    <button id="hamburger" class="icon-button hamburger-btn"
+            aria-label="Abrir menu" aria-expanded="false">
+      <!-- ícone hambúrguer -->
+      <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor"
+           fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <a href="/" class="logo"
+       aria-label="Página inicial Literalis">
+      <img src="/assets/images/logo_small.svg"
+           alt="Literalis">
+    </a>
+  </div>
+
+  <!-- bloco de busca -->
+  <div class="search-box" role="search">
+    <input type="search" name="q" placeholder="Pesquisar…" aria-label="Pesquisar">
+    <button class="icon-button search-btn" title="Pesquisar">
+      <img src="/assets/images/icons/search.svg"
+           alt="" aria-hidden="true">
+    </button>
+  </div>
+
+  <!-- ícones de navegação rápida -->
+  <ul class="nav-links" role="navigation" aria-label="Links rápidos">
+    <li>
+      <button class="icon-button" title="Mensagens">
+        <img src="/assets/images/icons/message.svg"
+             alt="Mensagens">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button" title="Notificações">
+        <img src="/assets/images/icons/notification.svg"
+             alt="Notificações">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button profile-btn" title="Perfil">
+        <img src="/assets/images/pp/diego.jpg"
+             alt="Sua foto de perfil">
+      </button>
+    </li>
+  </ul>
+</header>
+
+
+  <!-- Left Sidebar -->
+  <aside id="sidebar" class="sidebar" aria-label="Menu Lateral">
+    <p class="sr-only">Menu principal</p>
+
+    <div class="user-greeting"><h1>Oi <span>Renan</span></h1></div>
+
+    <nav class="menu">
+      <button type="button">Amigos</button>
+      <button type="button">Comunidade</button>
+      <button type="button" class="active">Estante</button>
+    </nav>
+
+    <div class="line-div" aria-hidden="true"></div>
+
+    <section class="actions">
+      <button class="olive-btn" type="button">Novo livro</button>
+      <h3>Atualizar leituras:</h3>
+      <article class="book">
+        <img src="./assets/images/books/recBook17.jpg" class="book-cover recent-book" alt="Capa do livro recente" />
+        <div class="progress-bar"><div style="width:36%"></div></div>
+        <p class="progress-number">346/983 páginas</p>
+      </article>
+    </section>
+</aside>
+
+  <main class="main-container">
+    <section class="recommended-container" aria-label="Leituras recomendadas">
+    <h2>Leituras Recomendadas</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="./assets/images/books/recBook6.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook2.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook8.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook4.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook5.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook1.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook7.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook3.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook9.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook14.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook11.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook12.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook13.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook10.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook15.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook16.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+        <div class="card">
+            <img src="./assets/images/books/recBook17.jpg" alt="Capa do livro" class="book-recomendation">
+        </div>
+    </div>
+</section>
+
+<div class="feed-switch-container" role="group" aria-label="Alternar entre as opções de feed">
+    <div class="div-line" aria-hidden="true"></div>
+    <button class="feed-switch-option active" data-feed="discover" active>Descobrir</button>
+    <button class="feed-switch-option" data-feed="friends">Amigos</button>
+    <button class="feed-switch-option" data-feed="events">Eventos</button>
+    <div class="div-line" aria-hidden="true"></div>
+</div>
+
+<section class="feed-container" aria-live="polite">
+    <article class="post" data-post-id="1">
+        <header class="post-header">
+            <div class="user-container">
+                <img src="./assets/images/pp/pp1.jpg" class="user-photo" alt="Foto de usuário">
+                <strong>Eduarda</strong>
+            </div>
+            <time class="post-time" datetime="2025-05-13T19:20:00-03:00">há 30 min</time>
+        </header>
+        <div class="post-body">
+            <aside class="book-info" aria-label="Informações do livro">
+                <img src="./assets/images/books/book1.jpg" class="book-cover" alt="Capa de Paraíso Perdido">
+                <div class="book-details">
+                    <h3>Paraíso Perdido</h3>
+                    <p><strong>Autor:</strong> John Milton</p>
+                    <p><strong>Editora:</strong> Editora 34</p>
+                    <p><strong>Ano:</strong> 1667</p>
+                    <div class="progress-bar"><div style="width:78%"></div></div>
+                    <p><strong>78%</strong> lido</p>
+                </div>
+            </aside>
+            <p class="post-text">
+                Milton reconta a queda de Adão e Eva com versos épicos que continuam poderosos
+                mesmo em tradução. A retórica de Satanás é o ponto alto — é impossível não se
+                encantar com a audácia do personagem. Leitura densa, mas cada canto compensa
+                o esforço.
+            </p>
+        </div>
+        <footer class="post-footer">
+            <div class="comments-preview">
+                <div class="comment">
+                    <img src="./assets/images/pp/diego.jpg" class="comment-photo" alt="Foto de Diego">
+                    <p><strong>Diego:</strong> Eu me remexo muito!</p>
+                </div>
+                <div class="comment-number">
+                    <p><strong>+1</strong></p>
+                </div>
+            </div>
+            <div class="post-actions">
+                <input type="text" class="comment-input" placeholder="Escreva um comentário…" aria-label="Escreva um comentário"/>
+                <button class="icon-button comment-btn" title="Abrir campo de comentário" aria-label="Abrir campo de comentário">
+                    <!-- svg comentário -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 017.6-8.5h.5a8.5 8.5 0 018 8z"/>
+                    </svg>
+                </button>
+                <button class="icon-button like-btn" title="Curtir" aria-pressed="false" aria-label="Curtir">
+                    <!-- svg curtir -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </article>
+</section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#">Sobre nós</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+      </nav>
+      <p>&copy; 2025 Literalis — todos os direitos reservados.</p>
+    </div>
+</footer>
+
+  <!-- JS globais -->
+  <script src="/scripts/sidebar.js" defer></script>
+  <script src="/scripts/likes.js" defer></script>
+  <script src="/scripts/feed.js" defer></script><script src="/scripts/feed.js" defer></script></body>
+</html>

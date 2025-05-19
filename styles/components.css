@@ -1,280 +1,37 @@
 /* -------------------------------------------------
-   COMPONENTS – estrutura, botões, cartões, posts…
+   COMPONENTS – ícones & botões gerais
    ------------------------------------------------ */
 
-/* ---------- Layout & estrutura geral ---------- */
-.main-container { display: flex; flex-direction: column; align-items: center; gap: 2rem; margin: 1rem 28rem; }
-
-.recommended-container { width: 100%; overflow-x: visible; overflow-y: visible; }
-
-.feed-container { display: flex; flex-direction: column; gap: 2rem; }
-
-.feed-switch-container { display: flex; justify-content: center; align-items: center; gap: var(--gap-xs); width: 100%; }
-.feed-switch-container .div-line { flex: 1; height: 1px; background: var(--olivy); }
-
-/* HEADER */
-.site-header {
-  position: sticky; top: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  height: var(--header-h); 
-  padding: 1rem 8rem;
-  background: var(--olivy); backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--olivy);
+/* animação usada em like-btn (mover para feed.css se preferir) */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
-.left-navbar { 
-  display: flex; align-items: center; 
-  gap: 2rem; 
-  width: 100%; 
+/* hover/control de foco em qualquer botão de ícone */
+.icon-button:hover {
+  background: rgba(0,0,0, .05);
+  transform: scale(1.05);
+}
+.icon-button:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
 }
 
-.hamburger-btn { 
-  display: none; 
-  padding: .25rem; 
-}
-
-.logo img { 
-  height: 40px; 
-}
-
-.nav-links { 
-  list-style: none; 
-  display: flex; justify-content: center; align-items: center; 
-  gap: 1rem; margin: 0; padding: 0; 
-}
-
-.profile-btn img { 
-  width: 36px; height: 36px; 
-  border-radius: 50%; 
-}
-
-.search-box { 
-  position: absolute; left: 50%; transform: translateX(-50%); 
-  display: flex; align-items: center; 
-  width: 37.5rem; max-width: 90vw; height: 60%; padding-inline: .75rem .25rem; 
-  background: var(--offwhite); border: 1px solid (var(--olive)); border-radius: 20px; 
-}
-
-.search-box input { 
-  flex: 1; 
-  border: 0; 
-  outline: 0; 
-  background: transparent; 
-  font: 1rem "Montserrat", sans-serif; 
-}
-
-.search-box .icon-button { 
-  padding: .25rem; 
-  border-radius: 50%; 
-  opacity: .65; 
-}
-
-/* ---------- Sidebar ---------- */
-.sidebar { 
-  position: fixed; top: calc(var(--header-h)); left: 0; z-index: 80; 
-  width: auto; height: calc(100vh - var(--header-h)); padding: var(--gap-sm); margin-left: 2rem; 
-  display: flex; flex-direction: column; align-items: center; 
-  overflow-y: auto; background: var(--offwhite); transition: transform .3s ease;
-  
-  /* ----- "debug" ----- */
-  /* border: 1px solid var(--olivy); border-radius: 10px; */
-}
-
-.sidebar.open { 
-  transform: translateX(0); 
-}
-
-.sidebar .menu,
-.sidebar .actions { 
-  display: flex; flex-direction: column; align-items: center; 
-  width: 100%; padding: var(--gap-sm); 
-}
-
-.sidebar .menu button, 
-.sidebar .actions .olive-btn { 
-  width: 100%; margin: .5rem 0; padding: .5rem; 
-  font: 1rem "Montserrat", sans-serif; color: var(--olive); 
-  border: 1px solid var(--olive); background: var(--offwhite); 
-}
-
-.sidebar .olive-btn { 
-  font-weight: 700; color: var(--offwhite); 
-  background: var(--olive); 
-}
-
-.sidebar .menu button:hover, 
-.sidebar .actions .olive-btn:hover { 
-  color: var(--offwhite); 
-  background: var(--olive); 
-}
-
-.sidebar .line-div { 
-  width: 100%;  height: 1px; 
-  margin: .5rem 0; 
-  background: var(--olivy); 
-}
-
-.user-greeting { 
-  text-align: center; line-height: 1.1; 
-}
-.user-greeting h1 { 
-  font: 2rem "Swistblnk Banthers", serif; color: #222; 
-}
-
-.user-greeting span { 
-  font-weight: 700; color: var(--olive); 
-}
-
-.recent-books {
-  width: 100%; gap: .25rem;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-}
-
-/* ---------- Ícones & Botões ---------- */
-@keyframes pop { 0%{transform:scale(1);} 50%{transform:scale(1.2);} 100%{transform:scale(1);} }
-
-.icon-button:hover { background: rgba(0,0,0,.05); transform: scale(1.05); }
-.icon-button:focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
-
-.like-btn svg { fill: none; }
-.like-btn.active { animation: pop .3s ease; }
-.like-btn.active svg { stroke: var(--olive); fill: var(--olive); }
-
-.send-btn { padding: .4rem; }
-
+/* botões primários e “ver mais” (usados em várias páginas) */
 .btn-primary,
-.btn-more { 
-  font-family: "Times New Roman", sans-serif; 
-  background: var(--olive); color: var(--offwhite); 
-  border: none; border-radius: 30px; 
-  padding: .75rem 1rem; 
-  transition: background-color .3s; 
+.btn-more {
+  font-family: "Times New Roman", serif;
+  background: var(--olive);
+  color: var(--offwhite);
+  border: none;
+  border-radius: 30px;
+  padding: .75rem 1rem;
+  transition: background-color .3s;
 }
-
-.btn-primary:hover, 
-.btn-more:hover { 
-  color: var(--olive); 
-  background: var(--offwhite); 
+.btn-primary:hover,
+.btn-more:hover {
+  color: var(--olive);
+  background: var(--offwhite);
 }
-
-/* Abas do feed */
-.feed-switch-option { 
-  padding: .5rem 1rem; 
-  border: 1px solid var(--olive); border-radius: var(--radius-md); 
-  font: 1rem "Montserrat", sans-serif; color: var(--olive);
-  transition: .25s; 
-}
-
-.feed-switch-option:hover, 
-.feed-switch-option.active { 
-  color: var(--offwhite); 
-  background: var(--olive); 
-}
-
-/* ==================== CARDS ==================== */
-.cards { 
-  display: flex; flex-direction: row; align-items: center;  gap: var(--gap-md);
-  overflow-x: scroll; overflow-y: visible; -webkit-overflow-scrolling: touch; 
-  padding: .5rem; width: 100%; height: 220px;
-}
-
-.card, 
-.book-recomendation { 
-  flex: 0 0 120px;  width: 120px; height: 200px; 
-  border: 1px solid var(--olivy); border-radius: var(--radius-md); 
-  cursor: pointer; transition: transform .5s ease; 
-}
-
-.card:hover { transform: scale(1.10); }
-
-.cards::-webkit-scrollbar { color: transparent; height: 0px; }
-
-/* ==================== POST ==================== */
-.post { 
-  display: flex; flex-direction: column; 
-  width: 100%; padding: 0.75rem 0; padding-bottom: 0; border-bottom: 1px solid var(--olivy);
-}
-
-/* => POST_HEADER */
-.post-header { 
-  display: flex; justify-content: space-between; align-items: center; 
-  font-family: "Montserrat", sans-serif;
-}
-
-.post-header .user-container { 
-  display: flex; align-items: center; 
-  gap: 1rem; 
-}
-
-.user-photo { 
-  width: 60px; height: 60px; 
-  border-radius: 50%; border: 1px solid var(--olivy); }
-
-/* => POST_BODY */
-.post-body { 
-  display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: var(--gap-sm); 
-  padding: 1rem 0; margin-bottom: 0; border-bottom: 1px solid var(--olivy);
-}
-
-.post-text { 
-  font-family: "Montserrat", sans-serif;  font-size: 1.2rem; line-height: 1.4; color: #333; margin-bottom: auto; 
-}
-
-.book-info { 
-  display: flex; 
-  gap: 1rem; 
-  font-family: "Montserrat", sans-serif;
-  padding-left: 1rem; border-left: 1px solid var(--olivy); 
-}
-
-.book-cover { 
-  max-width: 200px; 
-  border: 1px solid var(--olivy); border-radius: var(--radius-sm); 
-}
-
-.progress-bar, 
-.book .progress-bar { 
-  width: 100%; height: 10px; 
-  background: var(--offwhite); 
-  border-radius: var(--radius-sm);
-  overflow: hidden; 
-  margin-top: 1rem; 
-}
-
-.progress-bar > div { 
-  height: 100%; 
-  background: var(--olive); 
-}
-
-/* => POST_FOOTER */
-.post-footer {
-  display: flex; flex-direction: row; justify-content: space-between; 
-  width: 100%; height: 100%;
-  gap: var(--gap-sm);
-  padding: 1rem 0;
-  background-color: var(--offwhite);
-}
-
-.comments-preview { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: var(--gap-sm); width: 100%; }
-.comment { display: flex; align-items: center; gap: var(--gap-sm); }
-.comment img { width: 36px; max-width: 60px; height: 36px; max-height: 60px; border: 1px solid var(--olivy); border-radius: 50%; }
-.comment p { font-family: "Montserrat", sans-serif; font-size: 1rem;  line-height: 1.4; color: #333; }
-.comment-number p { font-family: "Montserrat", sans-serif; font-size: 1.2rem; line-height: 1.4; color: var(--olive); margin-right: 1rem; }
-.comment-input { font-family: "Montserrat", sans-serif; font-size: 1rem; line-height: 1.4; width: 100%; max-width: 400px; padding: .5rem; border: 1px solid var(--olivy); border-radius: var(--radius-sm); }
-
-.post-actions { 
-  display: flex; justify-content: flex-end; align-items: center; 
-  gap: var(--gap-sm); 
-  width: 100%; 
-}
-
-@media (prefers-reduced-motion:no-preference){
-  @keyframes pop{
-    0%{transform:scale(1)}
-    50%{transform:scale(1.15)}
-    100%{transform:scale(1)}
-  }
-  .like-btn.active{animation:pop .3s ease}
-}
-/* .like-btn.active svg{stroke:var(--olive);fill:var(--olive)} */
-/* .like-btn.active svg{fill:var(--olive)} */

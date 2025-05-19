@@ -1,0 +1,51 @@
+<header class="site-header" role="banner">
+  <div class="left-navbar">
+    <button id="hamburger" class="icon-button hamburger-btn"
+            aria-label="Abrir menu" aria-expanded="false">
+      <!-- ícone hambúrguer -->
+      <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor"
+           fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <a href="{{ '/' | relative_url }}" class="logo"
+       aria-label="Página inicial Literalis">
+      <img src="{{ '/assets/images/logo_small.svg' | relative_url }}"
+           alt="Literalis">
+    </a>
+  </div>
+
+  <!-- bloco de busca -->
+  <div class="search-box" role="search">
+    <input type="search" name="q" placeholder="Pesquisar…" aria-label="Pesquisar">
+    <button class="icon-button search-btn" title="Pesquisar">
+      <img src="{{ '/assets/images/icons/search.svg' | relative_url }}"
+           alt="" aria-hidden="true">
+    </button>
+  </div>
+
+  <!-- ícones de navegação rápida -->
+  <ul class="nav-links" role="navigation" aria-label="Links rápidos">
+    <li>
+      <button class="icon-button" title="Mensagens">
+        <img src="{{ '/assets/images/icons/message.svg' | relative_url }}"
+             alt="Mensagens">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button" title="Notificações">
+        <img src="{{ '/assets/images/icons/notification.svg' | relative_url }}"
+             alt="Notificações">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button profile-btn" title="Perfil">
+        <img src="{{ '/assets/images/pp/diego.jpg' | relative_url }}"
+             alt="Sua foto de perfil">
+      </button>
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="shortcut icon" href="{{ '/assets/images/logo_small.svg'}}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ '/styles/base.css'        | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/components.css'  | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/layout.css'      | relative_url }}">
+  
+  {% if page.extra_css %}
+  <link rel="stylesheet" href="{{ page.extra_css | relative_url }}">
+  {% endif %}
+  
+  <link rel="stylesheet" href="{{ '/styles/responsive.css'  | relative_url }}">
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+</head>
+
+<body>
+  {% include header.html   %}
+
+  <!-- Left Sidebar -->
+  {% include sidebar.html  %}
+
+  <main class="main-container">
+    {{ content }}
+  </main>
+
+  {% include footer.html   %}
+
+  <!-- JS globais -->
+  <script src="{{ '/scripts/sidebar.js'    | relative_url }}" defer></script>
+  <script src="{{ '/scripts/likes.js'      | relative_url }}" defer></script>
+  <script src="{{ '/scripts/feed.js' | relative_url }}" defer></script>
+
+  {%- if page.extra_js -%}
+    <script src="{{ page.extra_js | relative_url }}" defer></script>
+  {%- endif -%}
+</body>
+</html>

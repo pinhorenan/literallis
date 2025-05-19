@@ -1,0 +1,37 @@
+/* -------------------------------------------------
+   COMPONENTS – ícones & botões gerais
+   ------------------------------------------------ */
+
+/* animação usada em like-btn (mover para feed.css se preferir) */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* hover/control de foco em qualquer botão de ícone */
+.icon-button:hover {
+  background: rgba(0,0,0, .05);
+  transform: scale(1.05);
+}
+.icon-button:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+
+/* botões primários e “ver mais” (usados em várias páginas) */
+.btn-primary,
+.btn-more {
+  font-family: "Times New Roman", serif;
+  background: var(--olive);
+  color: var(--offwhite);
+  border: none;
+  border-radius: 30px;
+  padding: .75rem 1rem;
+  transition: background-color .3s;
+}
+.btn-primary:hover,
+.btn-more:hover {
+  color: var(--olive);
+  background: var(--offwhite);
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="shortcut icon" href="/assets/images/logo_small.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/components.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  
+  
+  
+  <link rel="stylesheet" href="/styles/responsive.css">
+
+  <title>Estante | Literalis</title>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+  <div class="left-navbar">
+    <button id="hamburger" class="icon-button hamburger-btn"
+            aria-label="Abrir menu" aria-expanded="false">
+      <!-- ícone hambúrguer -->
+      <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor"
+           fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <a href="/" class="logo"
+       aria-label="Página inicial Literalis">
+      <img src="/assets/images/logo_small.svg"
+           alt="Literalis">
+    </a>
+  </div>
+
+  <!-- bloco de busca -->
+  <div class="search-box" role="search">
+    <input type="search" name="q" placeholder="Pesquisar…" aria-label="Pesquisar">
+    <button class="icon-button search-btn" title="Pesquisar">
+      <img src="/assets/images/icons/search.svg"
+           alt="" aria-hidden="true">
+    </button>
+  </div>
+
+  <!-- ícones de navegação rápida -->
+  <ul class="nav-links" role="navigation" aria-label="Links rápidos">
+    <li>
+      <button class="icon-button" title="Mensagens">
+        <img src="/assets/images/icons/message.svg"
+             alt="Mensagens">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button" title="Notificações">
+        <img src="/assets/images/icons/notification.svg"
+             alt="Notificações">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button profile-btn" title="Perfil">
+        <img src="/assets/images/pp/diego.jpg"
+             alt="Sua foto de perfil">
+      </button>
+    </li>
+  </ul>
+</header>
+
+
+  <!-- Left Sidebar -->
+  <aside id="sidebar" class="sidebar" aria-label="Menu Lateral">
+    <p class="sr-only">Menu principal</p>
+
+    <div class="user-greeting"><h1>Oi <span>Renan</span></h1></div>
+
+    <nav class="menu">
+      <button type="button">Amigos</button>
+      <button type="button">Comunidade</button>
+      <button type="button" class="active">Estante</button>
+    </nav>
+
+    <div class="line-div" aria-hidden="true"></div>
+
+    <section class="actions">
+      <button class="olive-btn" type="button">Novo livro</button>
+      <h3>Atualizar leituras:</h3>
+      <article class="book">
+        <img src="./assets/images/books/recBook17.jpg" class="book-cover recent-book" alt="Capa do livro recente" />
+        <div class="progress-bar"><div style="width:36%"></div></div>
+        <p class="progress-number">346/983 páginas</p>
+      </article>
+    </section>
+</aside>
+
+  <main class="main-container">
+    <section class="bookshelf" aria-labelledby="titulo-estante">
+  <div class="bookshelf-header">
+    <h2 id="titulo-estante">Minha estante</h2>
+    <button class="olive-btn" type="button">Adicionar livro</button>
+  </div>
+  <div class="bookshelf-grid">
+    <article class="book">
+      <img src="./assets/images/books/recBook1.jpg" class="book-cover" alt="Capa O Senhor dos Anéis" />
+      <p class="book-title">O Senhor dos Anéis</p>
+      <p class="book-author">J.R.R. Tolkien</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook2.jpg" class="book-cover" alt="Capa Dom Quixote" />
+      <p class="book-title">Dom Quixote</p>
+      <p class="book-author">Miguel de Cervantes</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook3.jpg" class="book-cover" alt="Capa Cem Anos de Solidão" />
+      <p class="book-title">Cem Anos de Solidão</p>
+      <p class="book-author">Gabriel G. Márquez</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook4.jpg" class="book-cover" alt="Capa Orgulho e Preconceito" />
+      <p class="book-title">Orgulho e Preconceito</p>
+      <p class="book-author">Jane Austen</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook5.jpg" class="book-cover" alt="Capa 1984" />
+      <p class="book-title">1984</p>
+      <p class="book-author">George Orwell</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook6.jpg" class="book-cover" alt="Capa O Pequeno Príncipe" />
+      <p class="book-title">O Pequeno Príncipe</p>
+      <p class="book-author">Antoine de Saint-Exupéry</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook7.jpg" class="book-cover" alt="Capa A Revolução dos Bichos" />
+      <p class="book-title">A Revolução dos Bichos</p>
+      <p class="book-author">George Orwell</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook8.jpg" class="book-cover" alt="Capa A Menina que Roubava Livros" />
+      <p class="book-title">A Menina que Roubava Livros</p>
+      <p class="book-author">Markus Zusak</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook9.jpg" class="book-cover" alt="Capa O Nome do Vento" />
+      <p class="book-title">O Nome do Vento</p>
+      <p class="book-author">Patrick Rothfuss</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook10.jpg" class="book-cover" alt="Capa It: A Coisa" />
+      <p class="book-title">It: A Coisa</p>
+      <p class="book-author">Stephen King</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook11.jpg" class="book-cover" alt="Capa O Conto da Aia" />
+      <p class="book-title">O Conto da Aia</p>
+      <p class="book-author">Margaret Atwood</p>
+    </article>
+    <article class="book">
+      <img src="./assets/images/books/recBook12.jpg" class="book-cover" alt="Capa A Guerra dos Tronos" />
+      <p class="book-title">A Guerra dos Tronos</p>
+      <p class="book-author">George R. R. Martin</p>
+    </article>
+    <!-- ============================================================ -->
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#">Sobre nós</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+      </nav>
+      <p>&copy; 2025 Literalis — todos os direitos reservados.</p>
+    </div>
+</footer>
+
+  <!-- JS globais -->
+  <script src="/scripts/sidebar.js" defer></script>
+  <script src="/scripts/likes.js" defer></script>
+  <script src="/scripts/feed.js" defer></script></body>
+</html>

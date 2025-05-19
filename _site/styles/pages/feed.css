@@ -1,0 +1,198 @@
+/* -------------------------------------------------
+   FEED PAGE – estilos específicos
+   ------------------------------------------------ */
+
+/* Recomendações */
+.recommended-container {
+  width: 100%;
+  overflow: visible;
+}
+
+/* Grid de cards */
+.cards {
+  display: flex;
+  padding: .5rem;
+  width: 100%;
+  height: 220px;
+  gap: var(--gap-md);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.card,
+.book-recomendation {
+  flex: 0 0 120px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--olivy);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.cards::-webkit-scrollbar {
+  height: 0;
+}
+
+/* Botão de switch de feed */
+.feed-switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-xs);
+  width: 100%;
+}
+.feed-switch-container .div-line {
+  flex: 1;
+  height: 1px;
+  background: var(--olivy);
+}
+.feed-switch-option {
+  padding: .5rem 1rem;
+  border: 1px solid var(--olive);
+  border-radius: var(--radius-md);
+  font: 1rem "Montserrat", sans-serif;
+  color: var(--olive);
+  transition: .25s;
+}
+.feed-switch-option:hover,
+.feed-switch-option.active {
+  color: var(--offwhite);
+  background: var(--olive);
+}
+
+/* Container de posts */
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Estrutura de cada post */
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: .75rem 0 0;
+  border-bottom: 1px solid var(--olivy);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.post-header .user-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.user-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--olivy);
+}
+
+.post-body {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--olivy);
+}
+.post-text {
+  width: 100%;
+  font: 1.2rem/1.4 "Montserrat", sans-serif;
+  color: #333;
+  padding-left: var(--gap-sm);
+  margin-bottom: auto;
+}
+/* informação do livro anexada ao post */
+
+.book-cover {
+  max-width: 200px;
+  border: 1px solid var(--olivy);
+  border-radius: var(--radius-sm);
+}
+.book-info {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  border-right: 1px solid var(--olivy);
+}
+/* barra de progresso */
+.progress-bar,
+.book .progress-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--offwhite);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.progress-bar > div {
+  height: 100%;
+  background: var(--olive);
+}
+.post-footer {
+  display: flex; flex-direction: row; justify-content: space-between; gap: var(--gap-sm);
+  padding: 1rem 0;
+  background: var(--offwhite);
+}
+.comments-preview {
+  display: flex;
+  gap: var(--gap-sm);
+  width: 100%;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+.comment img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--olivy);
+}
+.comment p {
+  font: 1rem "Montserrat", sans-serif;
+  color: #333;
+}
+.comment-number p {
+  font: 1.2rem "Montserrat", sans-serif;
+  color: var(--olive);
+  margin-right: 1rem;
+}
+.comment-input {
+  font: 1rem "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 600px;
+  padding: .5rem;
+  border: 1px solid var(--olivy);
+  border-radius: var(--radius-sm);
+}
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--gap-sm);
+  width: 100%;
+}
+
+/* botão de “like” */
+.like-btn svg {
+  fill: none;
+}
+.like-btn.active {
+  animation: pop .3s ease;
+}
+.like-btn.active svg {
+  stroke: var(--olive);
+  fill: var(--olive);
+}
