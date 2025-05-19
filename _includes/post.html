@@ -1,0 +1,75 @@
+<article class="post" data-post-id="{{ include.post.id }}">
+  <header class="post-header">
+    <div class="user-container">
+      <img src="{{ include.post.author.avatar | relative_url }}"
+           class="user-photo"
+           alt="Avatar de {{ include.post.author.name }}">
+      <strong>{{ include.post.author.name }}</strong>
+    </div>
+    <time datetime="{{ include.post.time }}">
+      {{ include.post.time | date_to_relative }}
+    </time>
+  </header>
+
+  <div class="post-body">
+    <aside class="book-info" aria-label="Informações do livro">
+      <img src="{{ include.post.book.cover | relative_url }}"
+           class="book-cover"
+           alt="Capa de {{ include.post.book.title }}">
+      <div class="book-details">
+        <h3>{{ include.post.book.title }}</h3>
+        <p><strong>Autor:</strong> {{ include.post.book.author }}</p>
+        <p><strong>Editora:</strong> {{ include.post.book.publisher }}</p>
+        <p><strong>Ano:</strong> {{ include.post.book.year }}</p>
+        <div class="progress-bar">
+          <div style="width: {{ include.post.book.progress_pct }}%"></div>
+        </div>
+        <p><strong>{{ include.post.book.progress_pct }} %</strong> lido</p>
+      </div>
+    </aside>
+
+    <p class="post-text">{{ include.post.excerpt }}</p>
+  </div>
+
+  <footer class="post-footer">
+    <div class="comments-preview">
+        {% if include.post.comments and include.post.comments.size > 0 %}
+            {% for cm in include.post.comments %}
+            <div class="comment">
+                <img src="{{ cm.avatar | relative_url }}"
+                    alt="Avatar de {{ cm.user }}">
+                <p><strong>{{ cm.user }}:</strong> {{ cm.text }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-comments">Seja o primeiro a comentar!</p>
+        {% endif %}
+    </div>
+
+
+    <div class="post-actions">
+      <input type="text" class="comment-input"
+             placeholder="Escreva um comentário…" aria-label="Comentário">
+      <button class="icon-button comment-btn" title="Comentar" aria-label="Comentar">
+        <!-- SVG do balão -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 11.5a8.5 8.5 0 01-8 8h-.5
+                   a8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7
+                   a8.38 8.38 0 01-.9-3.8
+                   8.5 8.5 0 017.6-8.5h.5
+                   a8.5 8.5 0 018 8z"/>
+        </svg>
+      </button>
+      <button class="icon-button like-btn" title="Curtir" aria-label="Curtir">
+        <!-- SVG do coração -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1
+                   a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6
+                   1-1a5.5 5.5 0 000-7.8z"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+</article>

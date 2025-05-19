@@ -12,7 +12,9 @@
 .hamburger-btn { display: none; padding: .25rem; }
 .logo img { height: 40px; }
 .nav-links { list-style: none; display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 0; padding: 0; }
-.profile-btn img { width:36px; height: 36px; border-radius: 50%; }
+.profile-btn, 
+.profile-btn img { width:36px; height: 36px; border-radius: 50%; padding: 0; }
+
 
 /* Barra de pesquisa central */
 .search-box {
@@ -21,7 +23,7 @@
     width: 37.5rem; max-width: 90vw; height: 60%; 
     padding-inline: .75rem .25rem;
     background: var(--offwhite); 
-    border: 1px solid (var(--olive)); border-radius: var(--radius-md)
+    border: 1px solid var(--olive); border-radius: var(--radius-md)
 }
 .search-box input { flex: 1; border: 0; outline: 0; background: transparent; font: 1rem "Montserrat", sans-serif; }
 .search-box .icon-button { padding: .25rem; border-radius: 50%; opacity: .65; }
@@ -29,7 +31,7 @@
 /* --- SIDEBAR --- */
 .sidebar {
     position: fixed; top: var(--header-h); left: 0; z-index: 100;
-    width: var(--sidebar-w); height: calc(100vh - var(--header-h)); 
+    width: var(--sidebar-w); height: 100vh; 
     padding: var(--gap-md); margin-left: var(--gap-md);
     display: flex; flex-direction: column; align-items: center;
     background: var(--offwhite);
@@ -44,7 +46,7 @@ body.sidebar-open { overflow: hidden; }
 .user-gretting span { font-weight: 700; color: var(--olive); }
 
 .sidebar .menu, .sidebar .actions {
-    display: flex; flex-direction: column; align-items: center; ;
+    display: flex; flex-direction: column; align-items: center;
     width: 100%; padding: 1rem 0;
 }
 
@@ -71,7 +73,7 @@ body.sidebar-open { overflow: hidden; }
 footer {
     position: relative; bottom: 0; left: 0; right: 0;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 2.5rem 20rem; z-index: 90;
+    padding: 2.5rem 20rem; z-index: 100;
     background: var(--olive); color: var(--offwhite);
 }
 .footer-content { display: flex; align-items: center; justify-content: space-around; width: 100%; gap: 1rem; }

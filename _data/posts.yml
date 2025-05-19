@@ -1,0 +1,206 @@
+- id: 1
+  author:
+    name: Eduarda
+    avatar: /assets/images/pp/pp1.jpg
+  time: "2025-05-13T19:20:00-03:00"
+  excerpt: "Milton reconta a queda de Adão e Eva com versos épicos..."
+  book:
+    cover: /assets/images/books/paraiso-perdido.jpg
+    title: "Paraíso Perdido"
+    author: "John Milton"
+    publisher: "Editora 34"
+    year: 1667
+    progress_pct: 78
+
+- id: 2
+  author:
+    name: Poliana
+    avatar: /assets/images/pp/pp2.jpg
+  time: "2025-05-13T18:45:00-03:00"
+  excerpt: "Comecei a reler '1984' e me incomoda a atualidade da obra."
+  book:
+    cover: /assets/images/books/1984.jpg
+    title: "1984"
+    author: "George Orwell"
+    publisher: "Companhia das Letras"
+    year: 1949
+    progress_pct: 45
+
+- id: 3
+  author:
+    name: Mariana
+    avatar: /assets/images/pp/pp3.jpg
+  time: "2025-05-13T17:30:00-03:00"
+  excerpt: "A densidade filosófica de 'Cem Anos de Solidão' sempre me surpreende."
+  book:
+    cover: /assets/images/books/cem-anos-de-solidao.jpg
+    title: "Cem Anos de Solidão"
+    author: "Gabriel G. Márquez"
+    publisher: "Companhia das Letras"
+    year: 1967
+    progress_pct: 100
+
+- id: 4
+  author:
+    name: Lucas
+    avatar: /assets/images/pp/pp4.jpg
+  time: "2025-05-12T21:15:00-03:00"
+  excerpt: "Impressionado com a narrativa de 'O Nome do Vento', recomendo!"
+  book:
+    cover: /assets/images/books/nome-do-vento.jpg
+    title: "O Nome do Vento"
+    author: "Patrick Rothfuss"
+    publisher: "Arqueiro"
+    year: 2007
+    progress_pct: 60
+  comments:
+    - user: Ana
+      avatar: /assets/images/pp/pp5.jpg
+      text: "Também amo esse livro!"
+    - user: Bruno
+      avatar: /assets/images/pp/pp6.jpg
+      text: "Está na minha lista de leitura!"
+
+- id: 5
+  author:
+    name: Camila
+    avatar: /assets/images/pp/pp5.jpg
+  time: "2025-05-11T14:50:00-03:00"
+  excerpt: "'Orgulho e Preconceito' é eterno. Sempre encontro algo novo."
+  book:
+    cover: /assets/images/books/orgulho-e-preconceito.jpg
+    title: "Orgulho e Preconceito"
+    author: "Jane Austen"
+    publisher: "Penguin Classics"
+    year: 1813
+    progress_pct: 90
+  comments:
+    - user: Eduarda
+      avatar: /assets/images/pp/pp1.jpg
+      text: "Um clássico obrigatório!"
+
+- id: 6
+  author:
+    name: Gabriel
+    avatar: /assets/images/pp/pp6.jpg
+  time: "2025-05-10T18:05:00-03:00"
+  excerpt: "Reflexões profundas em 'O Pequeno Príncipe'. Uma obra incrível."
+  book:
+    cover: /assets/images/books/pequeno-principe.jpg
+    title: "O Pequeno Príncipe"
+    author: "Antoine de Saint-Exupéry"
+    publisher: "Harper Collins"
+    year: 1943
+    progress_pct: 100
+  comments: []
+
+- id: 7
+  author:
+    name: Pedro
+    avatar: /assets/images/pp/pp7.jpg
+  time: "2025-05-09T11:30:00-03:00"
+  excerpt: "'It: A Coisa' me fez ter medo de palhaços novamente! Stephen King é genial."
+  book:
+    cover: /assets/images/books/it-a-Coisa.jpg
+    title: "It: A Coisa"
+    author: "Stephen King"
+    publisher: "Suma"
+    year: 1986
+    progress_pct: 55
+  comments:
+    - user: Diego
+      avatar: /assets/images/pp/pp2.jpg
+      text: "A melhor obra dele, na minha opinião!"
+
+- id: 8
+  author:
+    name: Ana
+    avatar: /assets/images/pp/pp5.jpg
+  time: "2025-05-08T09:40:00-03:00"
+  excerpt: "'Dom Quixote' é surpreendentemente divertido e relevante!"
+  book:
+    cover: /assets/images/books/dom-quixote.jpg
+    title: "Dom Quixote"
+    author: "Miguel de Cervantes"
+    publisher: "Editora 34"
+    year: 1605
+    progress_pct: 40
+  comments:
+    - user: Lucas
+      avatar: /assets/images/pp/pp4.jpg
+      text: "Realmente, é uma leitura incrível!"
+    - user: Mariana
+      avatar: /assets/images/pp/pp3.jpg
+      text: "Preciso reler!"
+
+- id: 9
+  author:
+    name: Bruno
+    avatar: /assets/images/pp/pp6.jpg
+  time: "2025-05-07T16:20:00-03:00"
+  excerpt: "'O Conto da Aia' continua atual e perturbador. Muito recomendado!"
+  book:
+    cover: /assets/images/books/o-conto-da-aia.jpg
+    title: "O Conto da Aia"
+    author: "Margaret Atwood"
+    publisher: "Rocco"
+    year: 1985
+    progress_pct: 70
+  comments: []
+
+- id: 10
+  author:
+    name: Júlia
+    avatar: /assets/images/pp/pp8.jpg
+  time: "2025-05-06T12:10:00-03:00"
+  excerpt: "Markus Zusak realmente mexe com as emoções em 'A Menina que Roubava Livros'."
+  book:
+    cover: /assets/images/books/menina-roubava-livros.jpg
+    title: "A Menina que Roubava Livros"
+    author: "Markus Zusak"
+    publisher: "Intrínseca"
+    year: 2005
+    progress_pct: 100
+  comments:
+    - user: Camila
+      avatar: /assets/images/pp/pp5.jpg
+      text: "Uma história linda e tocante."
+
+- id: 11
+  author:
+    name: Fernando
+    avatar: /assets/images/pp/pp9.jpg
+  time: "2025-05-05T20:00:00-03:00"
+  excerpt: "Revendo minhas perspectivas com 'A Revolução dos Bichos'. Impressionante!"
+  book:
+    cover: /assets/images/books/revolucao-bichos.jpg
+    title: "A Revolução dos Bichos"
+    author: "George Orwell"
+    publisher: "Companhia das Letras"
+    year: 1945
+    progress_pct: 80
+  comments:
+    - user: Pedro
+      avatar: /assets/images/pp/pp7.jpg
+      text: "Orwell sempre certeiro!"
+
+- id: 12
+  author:
+    name: Laura
+    avatar: /assets/images/pp/pp10.jpg
+  time: "2025-05-04T08:45:00-03:00"
+  excerpt: "'O Senhor dos Anéis' continua sendo uma jornada épica sem igual!"
+  book:
+    cover: /assets/images/books/senhor-dos-aneis-1.jpg
+    title: "O Senhor dos Anéis: A Sociedade do Anel"
+    author: "J.R.R. Tolkien"
+    publisher: "Harper Collins"
+    year: 1954
+    progress_pct: 65
+  comments:
+    - user: Gabriel
+      avatar: /assets/images/pp/pp6.jpg
+      text: "Melhor fantasia já escrita!"
+    - user: Júlia
+      avatar: /assets/images/pp/pp8.jpg
+      text: "Adoro! Estou relendo pela terceira vez!"

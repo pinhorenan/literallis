@@ -95,8 +95,7 @@
 }
 
 #features_section {
-    background-color : #a25430b6;;
-    color: #fff;
+    color: var(--brown);
     padding: 4rem 2rem;
     text-align: center;
     align-content: center;

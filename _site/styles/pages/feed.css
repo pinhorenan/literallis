@@ -140,6 +140,7 @@
 }
 .post-footer {
   display: flex; flex-direction: row; justify-content: space-between; gap: var(--gap-sm);
+  z-index: 2;
   padding: 1rem 0;
   background: var(--offwhite);
 }
@@ -148,6 +149,9 @@
   gap: var(--gap-sm);
   width: 100%;
 }
+
+.no-comments { font-size: 1rem; color: var(--olive); margin: 1rem auto; text-align: center;}
+
 .comment {
   display: flex;
   align-items: center;

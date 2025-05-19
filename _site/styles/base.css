@@ -28,7 +28,7 @@
 }
 
 /* Reset & base */
-hmtl { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 *,*::before,*::after{ box-sizing: border-box; }
 
 body {
@@ -50,7 +50,7 @@ button {
     cursor: pointer;
 }
 
-:focus-visible { outline: 2px soli var(--olive); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
 
 .hidden { display: none !important; }
 .sr-only {

@@ -43,7 +43,7 @@
   .main-container { margin-inline: 1.5rem; }
 
   .search-box,
-  .nav-links { display: none; }
+  .nav-links .icon-button { display: none; }
 
   .feed-switch-container { gap: .2rem; }
 
