@@ -35,3 +35,26 @@
   color: var(--olive);
   background: var(--offwhite);
 }
+
+/* ===== SIDEBAR MENU BUTTONS ===== */
+.menu-btn, #newBookBtn {
+  width:100%;display:flex;align-items:center;justify-content:center;
+  gap:.5rem;padding:.6rem 1rem;
+  font:1rem "Montserrat",sans-serif;
+  color:var(--olive);
+  border:1px solid var(--olive);
+  border-radius:var(--radius-md);
+  background:var(--offwhite);
+  transition:background-color .25s,color .25s,transform .15s;
+}
+
+.menu-btn:hover,
+.menu-btn:focus-visible{
+  background:var(--olive);color:var(--offwhite);transform:translateY(-2px);
+}
+.menu-btn.active{
+  background:var(--olive);color:var(--offwhite);
+  /* removido pointer-events para permitir novo clique */
+}
+/* ícone opcional à esquerda */
+.menu-btn .icon{width:20px;height:20px;flex:0 0 20px;}

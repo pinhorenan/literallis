@@ -1,75 +1,51 @@
 ---
 layout: default
 title: Estante
-extra-css: ./styles/pages/bookshelf.css
+permalink: /bookshelf/
+extra_css: /styles/pages/bookshelf.css
+extra_js:  /scripts/bookshelf.js   # se quiser manter filtro/ordenar
 ---
 
-<section class="bookshelf" aria-labelledby="titulo-estante">
-  <div class="bookshelf-header">
-    <h2 id="titulo-estante">Minha estante</h2>
-    <button class="olive-btn" type="button">Adicionar livro</button>
+<div class="bookshelf">
+  <header class="bookshelf-header">
+    <h1 class="bookshelf-title">Minha Estante</h1>
+
+    <div class="bookshelf-controls">
+      <input
+        type="search"
+        id="filter"
+        placeholder="🔍 Filtrar por título ou autor…"
+        aria-label="Filtrar livros">
+      <select id="sort" aria-label="Ordenar">
+        <option value="title">Título (A-Z)</option>
+        <option value="author">Autor (A-Z)</option>
+        <option value="year">Ano (Mais recentes)</option>
+      </select>
+    </div>
+  </header>
+
+  <div id="bookshelfGrid" class="bookshelf-grid">
+    {% for book in site.data.books %}
+      <article
+        class="book-card"
+        data-title="{{ book.title | downcase }}"
+        data-author="{{ book.author | downcase }}"
+        data-year="{{ book.year }}">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="{{ book.cover | relative_url }}"
+            alt="Capa de {{ book.title }}"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">{{ book.title }}</h2>
+          <p class="book-author">{{ book.author }}</p>
+          <p class="book-meta">{{ book.publisher }}, {{ book.year }}</p>
+        </div>
+      </article>
+    {% endfor %}
   </div>
-  <div class="bookshelf-grid">
-    <article class="book">
-      <img src="./assets/images/books/recBook1.jpg" class="book-cover" alt="Capa O Senhor dos Anéis" />
-      <p class="book-title">O Senhor dos Anéis</p>
-      <p class="book-author">J.R.R. Tolkien</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook2.jpg" class="book-cover" alt="Capa Dom Quixote" />
-      <p class="book-title">Dom Quixote</p>
-      <p class="book-author">Miguel de Cervantes</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook3.jpg" class="book-cover" alt="Capa Cem Anos de Solidão" />
-      <p class="book-title">Cem Anos de Solidão</p>
-      <p class="book-author">Gabriel G. Márquez</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook4.jpg" class="book-cover" alt="Capa Orgulho e Preconceito" />
-      <p class="book-title">Orgulho e Preconceito</p>
-      <p class="book-author">Jane Austen</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook5.jpg" class="book-cover" alt="Capa 1984" />
-      <p class="book-title">1984</p>
-      <p class="book-author">George Orwell</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook6.jpg" class="book-cover" alt="Capa O Pequeno Príncipe" />
-      <p class="book-title">O Pequeno Príncipe</p>
-      <p class="book-author">Antoine de Saint-Exupéry</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook7.jpg" class="book-cover" alt="Capa A Revolução dos Bichos" />
-      <p class="book-title">A Revolução dos Bichos</p>
-      <p class="book-author">George Orwell</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook8.jpg" class="book-cover" alt="Capa A Menina que Roubava Livros" />
-      <p class="book-title">A Menina que Roubava Livros</p>
-      <p class="book-author">Markus Zusak</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook9.jpg" class="book-cover" alt="Capa O Nome do Vento" />
-      <p class="book-title">O Nome do Vento</p>
-      <p class="book-author">Patrick Rothfuss</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook10.jpg" class="book-cover" alt="Capa It: A Coisa" />
-      <p class="book-title">It: A Coisa</p>
-      <p class="book-author">Stephen King</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook11.jpg" class="book-cover" alt="Capa O Conto da Aia" />
-      <p class="book-title">O Conto da Aia</p>
-      <p class="book-author">Margaret Atwood</p>
-    </article>
-    <article class="book">
-      <img src="./assets/images/books/recBook12.jpg" class="book-cover" alt="Capa A Guerra dos Tronos" />
-      <p class="book-title">A Guerra dos Tronos</p>
-      <p class="book-author">George R. R. Martin</p>
-    </article>
-    <!-- ============================================================ -->
-  </div>
-</section>
+</div>

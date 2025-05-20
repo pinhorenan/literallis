@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/literalis/styles/components.css">
   <link rel="stylesheet" href="/literalis/styles/layout.css"><link rel="stylesheet" href="/literalis/styles/pages/feed.css"><link rel="stylesheet" href="/literalis/styles/responsive.css">
 
-  <title>Literalis — Feed | Literalis</title>
+  <title>Feed | Literalis</title>
 </head>
 
 <body><header class="site-header" role="banner">
@@ -68,29 +68,65 @@
   </ul>
 </header>
 
-    <aside id="sidebar" class="sidebar" aria-label="Menu Lateral">
-    <p class="sr-only">Menu principal</p>
+    <aside id="sidebar" class="sidebar" aria-label="Menu lateral">
+  <p class="sr-only">Menu principal</p>
 
-    <div class="user-greeting"><h1>Oi <span>Renan</span></h1></div>
+  <div class="user-greeting"><h1>Oi <span>Renan</span></h1></div>
 
-    <nav class="menu">
-      <button type="button">Amigos</button>
-      <button type="button">Comunidade</button>
-      <button type="button" class="active">Estante</button>
-    </nav>
+  <!-- MENU PRINCIPAL -->
+  <nav class="menu" aria-label="Seções">
+    <!-- AMIGOS -->
+    <a href="/literalis/feed/?tab=friends" class="menu-btn" data-tab="friends">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <span>Amigos</span>
+    </a>
 
-    <div class="line-div" aria-hidden="true"></div>
+    <!-- COMUNIDADE -->
+    <a href="/literalis/feed/?tab=discover" class="menu-btn" data-tab="discover">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span>Comunidade</span>
+    </a>
 
-    <section class="actions">
-      <button class="olive-btn" type="button">Novo livro</button>
-      <h3>Atualizar leituras:</h3>
-      <article class="book">
-        <img src="/literalis/assets/images/books/recBook17.jpg" class="book-cover recent-book" alt="Capa do livro recente" />
-        <div class="progress-bar"><div style="width:36%"></div></div>
-        <p class="progress-number">346/983 páginas</p>
-      </article>
-    </section>
-</aside><main class="main-container">
+    <!-- ESTANTE -->
+    <a href="/literalis/bookshelf/" class="menu-btn" id="bookshelfBtn">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 19V5a2 2 0 0 1 2-2h11"/>
+        <path d="M16 3v16a2 2 0 0 0 2 2h3"/>
+        <path d="M7 17h4"/>
+        <path d="M7 13h4"/>
+      </svg>
+      <span>Estante</span>
+    </a>
+  </nav>
+
+  <div class="line-div" aria-hidden="true"></div>
+
+  <!-- AÇÕES -->
+  <section class="actions">
+    <button class="olive-btn" type="button" id="newBookBtn">Novo livro</button>
+
+    <h3>Atualizar leituras:</h3>
+    <article class="book">
+      <img src="/literalis/assets/images/books/recBook17.jpg"
+           alt="Capa do livro recente" class="book-cover recent-book">
+      <div class="progress-bar"><div style="width:36%"></div></div>
+      <p class="progress-number">346/983 páginas</p>
+    </article>
+  </section>
+</aside>
+<main class="main-container">
     <section class="recommended-container" aria-label="Leituras recomendadas">
   <h2>Leituras Recomendadas</h2>
   <div class="cards">
@@ -1078,5 +1114,5 @@
     </div>
 </footer>
 
-  <!-- JS globais --><script src="/literalis/scripts/sidebar.js" defer></script><script src="/literalis/scripts/likes.js" defer></script></body>
+  <!-- JS globais --><script src="/literalis/scripts/sidebar.js" defer></script><script src="/literalis/scripts/feed.js" defer></script><script src="/literalis/scripts/likes.js" defer></script></body>
 </html>

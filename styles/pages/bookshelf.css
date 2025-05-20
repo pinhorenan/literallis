@@ -1,43 +1,118 @@
-/* ------------------------------
-   BOOKSHELF (grade da estante)
-   ------------------------------ */
-
-/* Cabeçalho da seção */
-.bookshelf-header{
-  display:flex; justify-content:space-between; align-items:center;
-  width:100%; max-width:1400px;
-  padding-block:1rem;
-  border-bottom:1px solid var(--olivy);
+main.main-container {
+  /* passar de “sidebar+4rem” para algo genérico, por ex.: */
+  margin-inline: var(--gap-md);    /* 1 rem de cada lado */
 }
 
-.bookshelf-header h2{
-  font:2rem/1 "Playfair Display",serif;
-  margin:0;
+/* ===== Geral ===== */
+.bookshelf {
+  padding: var(--gap-sm) var(--gap-md);
+  color: var(--text-default);
 }
 
-.bookshelf-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-  gap:var(--gap-md);
-  width:100%; max-width:1400px;
-  padding-block:1rem 2rem;
+/* ===== Cabeçalho ===== */
+.bookshelf-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gap-lg);
 }
 
-/* Card do livro (reaproveita .book, mas traz alguns ajustes) */
-.book{
-  display:flex; flex-direction:column; align-items:center; text-align:center;
-  gap:.25rem; padding:.5rem;
-  border:1px solid var(--olivy); border-radius:var(--radius-md);
-  transition:transform .3s ease;
+.bookshelf-title {
+  font-size: 2rem;
+  margin: 0;
 }
-.book:hover{transform:translateY(-4px);}  /* pequeno “lift” */
 
-.book-cover{width:100%; height:auto; object-fit:cover; border-radius:var(--radius-sm);}
-.book-title{font:600 1rem/1.2 "Montserrat",sans-serif; margin:.25rem 0 0;}
-.book-author{font:.875rem/1.2 "Montserrat",sans-serif; color:var(--brown-dark); margin:0;}
+.bookshelf-controls {
+  display: flex;
+  gap: var(--gap-sm);
+}
 
-@media (max-width:768px){
-  .bookshelf-header h2{font-size:1.5rem;}
-  .book-title {font-size:.9rem;}
-  .book-author{font-size:.8rem;}
+.bookshelf-controls input,
+.bookshelf-controls select {
+  padding: 0.5rem 0.75rem;
+  font: 1rem "Montserrat", sans-serif;
+  border: 1px solid var(--olive);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+/* ===== Grid ===== */
+.bookshelf-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(180px, 1fr));
+  justify-content: center;
+  gap: var(--gap-lg);
+}
+
+/* ===== Card do Livro ===== */
+.bookshelf-grid .book-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 180px;
+}
+
+.bookshelf-grid .book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Wrapper e capa mantém proporção 2:3 */
+.bookshelf-grid .book-cover-wrapper {
+  width: 100%;
+  padding-top: 150%;
+  position: relative;
+}
+
+.bookshelf-grid .book-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informações do livro */
+.bookshelf-grid .book-info {
+  padding: var(--gap-sm);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font: 1rem "Montserrat", sans-serif;
+}
+
+.bookshelf-grid .book-title {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.bookshelf-grid .book-author {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.bookshelf-grid .book-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  .bookshelf-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-sm);
+  }
+  .bookshelf-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
 }

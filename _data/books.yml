@@ -1,0 +1,71 @@
+- title: "Paraíso Perdido"
+  author: "John Milton"
+  cover: "/assets/images/books/paraiso-perdido.jpg"
+  publisher: "Editora 34"
+  year: 1667
+
+- title: "1984"
+  author: "George Orwell"
+  cover: "/assets/images/books/1984.jpg"
+  publisher: "Companhia das Letras"
+  year: 1949
+
+- title: "Cem Anos de Solidão"
+  author: "Gabriel G. Márquez"
+  cover: "/assets/images/books/cem-anos-de-solidao.jpg"
+  publisher: "Companhia das Letras"
+  year: 1967
+
+- title: "O Nome do Vento"
+  author: "Patrick Rothfuss"
+  cover: "/assets/images/books/nome-do-vento.jpg"
+  publisher: "Arqueiro"
+  year: 2007
+
+- title: "Orgulho e Preconceito"
+  author: "Jane Austen"
+  cover: "/assets/images/books/orgulho-e-preconceito.jpg"
+  publisher: "Penguin Classics"
+  year: 1813
+
+- title: "O Pequeno Príncipe"
+  author: "Antoine de Saint-Exupéry"
+  cover: "/assets/images/books/pequeno-principe.jpg"
+  publisher: "Harper Collins"
+  year: 1943
+
+- title: "It: A Coisa"
+  author: "Stephen King"
+  cover: "/assets/images/books/it-a-coisa.jpg"
+  publisher: "Suma"
+  year: 1986
+
+- title: "Dom Quixote"
+  author: "Miguel de Cervantes"
+  cover: "/assets/images/books/dom-quixote.jpg"
+  publisher: "Editora 34"
+  year: 1605
+
+- title: "O Conto da Aia"
+  author: "Margaret Atwood"
+  cover: "/assets/images/books/o-conto-da-aia.jpg"
+  publisher: "Rocco"
+  year: 1985
+
+- title: "A Menina que Roubava Livros"
+  author: "Markus Zusak"
+  cover: "/assets/images/books/menina-roubava-livros.jpg"
+  publisher: "Intrínseca"
+  year: 2005
+
+- title: "A Revolução dos Bichos"
+  author: "George Orwell"
+  cover: "/assets/images/books/revolucao-bichos.jpg"
+  publisher: "Companhia das Letras"
+  year: 1945
+
+- title: "O Senhor dos Anéis: A Sociedade do Anel"
+  author: "J.R.R. Tolkien"
+  cover: "/assets/images/books/senhor-dos-aneis-1.jpg"
+  publisher: "Harper Collins"
+  year: 1954

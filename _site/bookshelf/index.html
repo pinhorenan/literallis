@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="shortcut icon" href="/literalis/assets/images/logo_small.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/literalis/styles/base.css">
+  <link rel="stylesheet" href="/literalis/styles/components.css">
+  <link rel="stylesheet" href="/literalis/styles/layout.css"><link rel="stylesheet" href="/literalis/styles/pages/bookshelf.css"><link rel="stylesheet" href="/literalis/styles/responsive.css">
+
+  <title>Estante | Literalis</title>
+</head>
+
+<body><header class="site-header" role="banner">
+  <div class="left-navbar">
+    <button id="hamburger" class="icon-button hamburger-btn"
+            aria-label="Abrir menu" aria-expanded="false">
+      <!-- ícone hambúrguer -->
+      <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor"
+           fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <a href="/literalis/" class="logo"
+       aria-label="Página inicial Literalis">
+      <img src="/literalis/assets/images/logo_small.svg"
+           alt="Literalis">
+    </a>
+  </div>
+
+  <!-- bloco de busca -->
+  <div class="search-box" role="search">
+    <input type="search" name="q" placeholder="Pesquisar…" aria-label="Pesquisar">
+    <button class="icon-button search-btn" title="Pesquisar">
+      <img src="/literalis/assets/images/icons/search.svg"
+           alt="" aria-hidden="true">
+    </button>
+  </div>
+
+  <!-- ícones de navegação rápida -->
+  <ul class="nav-links" role="navigation" aria-label="Links rápidos">
+    <li>
+      <button class="icon-button" title="Mensagens">
+        <img src="/literalis/assets/images/icons/message.svg"
+             alt="Mensagens">
+      </button>
+    </li>
+    <li>
+      <button class="icon-button" title="Notificações">
+        <img src="/literalis/assets/images/icons/notification.svg"
+             alt="Notificações">
+      </button>
+    </li>
+    <li>
+      <button class="profile-btn" title="Perfil">
+        <img src="/literalis/assets/images/pp/diego.jpg"
+             alt="Sua foto de perfil">
+      </button>
+    </li>
+  </ul>
+</header>
+
+    <aside id="sidebar" class="sidebar" aria-label="Menu lateral">
+  <p class="sr-only">Menu principal</p>
+
+  <div class="user-greeting"><h1>Oi <span>Renan</span></h1></div>
+
+  <!-- MENU PRINCIPAL -->
+  <nav class="menu" aria-label="Seções">
+    <!-- AMIGOS -->
+    <a href="/literalis/feed/?tab=friends" class="menu-btn" data-tab="friends">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <span>Amigos</span>
+    </a>
+
+    <!-- COMUNIDADE -->
+    <a href="/literalis/feed/?tab=discover" class="menu-btn" data-tab="discover">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span>Comunidade</span>
+    </a>
+
+    <!-- ESTANTE -->
+    <a href="/literalis/bookshelf/" class="menu-btn" id="bookshelfBtn">
+      <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 19V5a2 2 0 0 1 2-2h11"/>
+        <path d="M16 3v16a2 2 0 0 0 2 2h3"/>
+        <path d="M7 17h4"/>
+        <path d="M7 13h4"/>
+      </svg>
+      <span>Estante</span>
+    </a>
+  </nav>
+
+  <div class="line-div" aria-hidden="true"></div>
+
+  <!-- AÇÕES -->
+  <section class="actions">
+    <button class="olive-btn" type="button" id="newBookBtn">Novo livro</button>
+
+    <h3>Atualizar leituras:</h3>
+    <article class="book">
+      <img src="/literalis/assets/images/books/recBook17.jpg"
+           alt="Capa do livro recente" class="book-cover recent-book">
+      <div class="progress-bar"><div style="width:36%"></div></div>
+      <p class="progress-number">346/983 páginas</p>
+    </article>
+  </section>
+</aside>
+<main class="main-container">
+    <div class="bookshelf">
+  <header class="bookshelf-header">
+    <h1 class="bookshelf-title">Minha Estante</h1>
+
+    <div class="bookshelf-controls">
+      <input
+        type="search"
+        id="filter"
+        placeholder="🔍 Filtrar por título ou autor…"
+        aria-label="Filtrar livros">
+      <select id="sort" aria-label="Ordenar">
+        <option value="title">Título (A-Z)</option>
+        <option value="author">Autor (A-Z)</option>
+        <option value="year">Ano (Mais recentes)</option>
+      </select>
+    </div>
+  </header>
+
+  <div id="bookshelfGrid" class="bookshelf-grid">
+    
+      <article
+        class="book-card"
+        data-title="paraíso perdido"
+        data-author="john milton"
+        data-year="1667">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/paraiso-perdido.jpg"
+            alt="Capa de Paraíso Perdido"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">Paraíso Perdido</h2>
+          <p class="book-author">John Milton</p>
+          <p class="book-meta">Editora 34, 1667</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="1984"
+        data-author="george orwell"
+        data-year="1949">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/1984.jpg"
+            alt="Capa de 1984"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">1984</h2>
+          <p class="book-author">George Orwell</p>
+          <p class="book-meta">Companhia das Letras, 1949</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="cem anos de solidão"
+        data-author="gabriel g. márquez"
+        data-year="1967">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/cem-anos-de-solidao.jpg"
+            alt="Capa de Cem Anos de Solidão"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">Cem Anos de Solidão</h2>
+          <p class="book-author">Gabriel G. Márquez</p>
+          <p class="book-meta">Companhia das Letras, 1967</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="o nome do vento"
+        data-author="patrick rothfuss"
+        data-year="2007">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/nome-do-vento.jpg"
+            alt="Capa de O Nome do Vento"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">O Nome do Vento</h2>
+          <p class="book-author">Patrick Rothfuss</p>
+          <p class="book-meta">Arqueiro, 2007</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="orgulho e preconceito"
+        data-author="jane austen"
+        data-year="1813">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/orgulho-e-preconceito.jpg"
+            alt="Capa de Orgulho e Preconceito"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">Orgulho e Preconceito</h2>
+          <p class="book-author">Jane Austen</p>
+          <p class="book-meta">Penguin Classics, 1813</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="o pequeno príncipe"
+        data-author="antoine de saint-exupéry"
+        data-year="1943">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/pequeno-principe.jpg"
+            alt="Capa de O Pequeno Príncipe"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">O Pequeno Príncipe</h2>
+          <p class="book-author">Antoine de Saint-Exupéry</p>
+          <p class="book-meta">Harper Collins, 1943</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="it: a coisa"
+        data-author="stephen king"
+        data-year="1986">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/it-a-coisa.jpg"
+            alt="Capa de It: A Coisa"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">It: A Coisa</h2>
+          <p class="book-author">Stephen King</p>
+          <p class="book-meta">Suma, 1986</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="dom quixote"
+        data-author="miguel de cervantes"
+        data-year="1605">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/dom-quixote.jpg"
+            alt="Capa de Dom Quixote"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">Dom Quixote</h2>
+          <p class="book-author">Miguel de Cervantes</p>
+          <p class="book-meta">Editora 34, 1605</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="o conto da aia"
+        data-author="margaret atwood"
+        data-year="1985">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/o-conto-da-aia.jpg"
+            alt="Capa de O Conto da Aia"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">O Conto da Aia</h2>
+          <p class="book-author">Margaret Atwood</p>
+          <p class="book-meta">Rocco, 1985</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="a menina que roubava livros"
+        data-author="markus zusak"
+        data-year="2005">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/menina-roubava-livros.jpg"
+            alt="Capa de A Menina que Roubava Livros"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">A Menina que Roubava Livros</h2>
+          <p class="book-author">Markus Zusak</p>
+          <p class="book-meta">Intrínseca, 2005</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="a revolução dos bichos"
+        data-author="george orwell"
+        data-year="1945">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/revolucao-bichos.jpg"
+            alt="Capa de A Revolução dos Bichos"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">A Revolução dos Bichos</h2>
+          <p class="book-author">George Orwell</p>
+          <p class="book-meta">Companhia das Letras, 1945</p>
+        </div>
+      </article>
+    
+      <article
+        class="book-card"
+        data-title="o senhor dos anéis: a sociedade do anel"
+        data-author="j.r.r. tolkien"
+        data-year="1954">
+        
+        <div class="book-cover-wrapper">
+          <img
+            src="/literalis/assets/images/books/senhor-dos-aneis-1.jpg"
+            alt="Capa de O Senhor dos Anéis: A Sociedade do Anel"
+            class="book-cover"
+            loading="lazy">
+        </div>
+
+        <div class="book-info">
+          <h2 class="book-title">O Senhor dos Anéis: A Sociedade do Anel</h2>
+          <p class="book-author">J.R.R. Tolkien</p>
+          <p class="book-meta">Harper Collins, 1954</p>
+        </div>
+      </article>
+    
+  </div>
+</div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#">Sobre nós</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+      </nav>
+      <p>&copy; 2025 Literalis — todos os direitos reservados.</p>
+    </div>
+</footer>
+
+  <!-- JS globais --><script src="/literalis/scripts/sidebar.js" defer></script><script src="/literalis/scripts/bookshelf.js" defer></script></body>
+</html>
