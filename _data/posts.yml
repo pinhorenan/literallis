@@ -101,7 +101,7 @@
   time: "2025-05-09T11:30:00-03:00"
   excerpt: "'It: A Coisa' me fez ter medo de palhaços novamente! Stephen King é genial."
   book:
-    cover: /assets/images/books/it-a-Coisa.jpg
+    cover: /assets/images/books/it-a-coisa.jpg
     title: "It: A Coisa"
     author: "Stephen King"
     publisher: "Suma"
