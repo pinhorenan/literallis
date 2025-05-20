@@ -3,7 +3,7 @@ layout: default
 title: Estante
 permalink: /bookshelf/
 extra_css: /styles/pages/bookshelf.css
-extra_js:  /scripts/bookshelf.js   # se quiser manter filtro/ordenar
+extra_js:  /scripts/bookshelf.js
 ---
 
 <div class="bookshelf">
@@ -11,11 +11,8 @@ extra_js:  /scripts/bookshelf.js   # se quiser manter filtro/ordenar
     <h1 class="bookshelf-title">Minha Estante</h1>
 
     <div class="bookshelf-controls">
-      <input
-        type="search"
-        id="filter"
-        placeholder="🔍 Filtrar por título ou autor…"
-        aria-label="Filtrar livros">
+      <input type="search" id="filter"
+             placeholder="Filtrar por título ou autor…" aria-label="Filtrar livros">
       <select id="sort" aria-label="Ordenar">
         <option value="title">Título (A-Z)</option>
         <option value="author">Autor (A-Z)</option>
@@ -28,22 +25,20 @@ extra_js:  /scripts/bookshelf.js   # se quiser manter filtro/ordenar
     {% for book in site.data.books %}
       <article
         class="book-card"
-        data-title="{{ book.title | downcase }}"
+        data-title="{{ book.title   | downcase }}"
         data-author="{{ book.author | downcase }}"
-        data-year="{{ book.year }}">
-        
+        data-year="{{ book.publication_date | slice: 0,4 }}">
+
         <div class="book-cover-wrapper">
-          <img
-            src="{{ book.cover | relative_url }}"
-            alt="Capa de {{ book.title }}"
-            class="book-cover"
-            loading="lazy">
+          <img src="{{ book.cover | relative_url }}"
+               alt="Capa de {{ book.title }}"
+               class="book-cover"
+               loading="lazy">
         </div>
 
         <div class="book-info">
           <h2 class="book-title">{{ book.title }}</h2>
           <p class="book-author">{{ book.author }}</p>
-          <p class="book-meta">{{ book.publisher }}, {{ book.year }}</p>
         </div>
       </article>
     {% endfor %}

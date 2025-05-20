@@ -1,71 +1,264 @@
-- title: "Paraíso Perdido"
+#ok
+- isbn: "8573266112"
+  title: "Paraíso Perdido"
   author: "John Milton"
   cover: "/assets/images/books/paraiso-perdido.jpg"
   publisher: "Editora 34"
-  year: 1667
+  edition: 2
+  pages: 896
+  language: "Português"
+  publication_date: "2016-01-01"
 
-- title: "1984"
+#ok
+- isbn: "8535914846"
+  title: "1984"
   author: "George Orwell"
   cover: "/assets/images/books/1984.jpg"
   publisher: "Companhia das Letras"
-  year: 1949
+  edition: 1
+  pages: 416
+  language: "Português"
+  publication_date: "2009-17-21"
 
-- title: "Cem Anos de Solidão"
-  author: "Gabriel G. Márquez"
+#ok
+- isbn: "9788501012074"
+  title: "Cem Anos de Solidão"
+  author: "Gabriel García Márquez"
   cover: "/assets/images/books/cem-anos-de-solidao.jpg"
-  publisher: "Companhia das Letras"
-  year: 1967
+  publisher: "Record"
+  edition: 129
+  pages: 488
+  language: "Português"
+  publication_date: "1977-04-01"
 
-- title: "O Nome do Vento"
+#ok
+- isbn: "8599296493"
+  title: "O Nome do Vento"
   author: "Patrick Rothfuss"
   cover: "/assets/images/books/nome-do-vento.jpg"
-  publisher: "Arqueiro"
-  year: 2007
+  publisher: "Editora Arqueiro"
+  edition: 1
+  pages: 656
+  language: "Português"
+  publication_date: "2009-07-21"
 
-- title: "Orgulho e Preconceito"
+#ok
+- isbn: "8563560158"
+  title: "Orgulho e Preconceito"
   author: "Jane Austen"
   cover: "/assets/images/books/orgulho-e-preconceito.jpg"
-  publisher: "Penguin Classics"
-  year: 1813
+  publisher: "Penguin-Companhia"
+  edition: 1
+  pages: 576
+  language: "Português"
+  publication_date: "2011-06-21"
 
-- title: "O Pequeno Príncipe"
+#ok
+- isbn: "8595081514"
+  title: "O Pequeno Príncipe"
   author: "Antoine de Saint-Exupéry"
   cover: "/assets/images/books/pequeno-principe.jpg"
-  publisher: "Harper Collins"
-  year: 1943
+  publisher: "HarperCollins"
+  edition: 1
+  pages: 96
+  language: "Português"
+  publication_date: "2018-08-27"
 
-- title: "It: A Coisa"
+#ok
+- isbn: "8560280944"
+  title: "It: A Coisa"
   author: "Stephen King"
   cover: "/assets/images/books/it-a-coisa.jpg"
   publisher: "Suma"
-  year: 1986
+  edition: 1
+  pages: 1104
+  language: "Português"
+  publication_date: "2014-07-24"
 
-- title: "Dom Quixote"
+#ok
+- isbn: "8563560557"
+  title: "Dom Quixote"
   author: "Miguel de Cervantes"
   cover: "/assets/images/books/dom-quixote.jpg"
-  publisher: "Editora 34"
-  year: 1605
+  publisher: "Penguin-Companhia"
+  edition: 1
+  pages: 1328
+  language: "Português"
+  publication_date: "2012-12-05"
 
-- title: "O Conto da Aia"
+#ok
+- isbn: "8532520669"
+  title: "O Conto da Aia"
   author: "Margaret Atwood"
   cover: "/assets/images/books/o-conto-da-aia.jpg"
   publisher: "Rocco"
-  year: 1985
+  edition: 1
+  pages: 368
+  language: "Português"
+  publication_date: "2017-06-07"
 
-- title: "A Menina que Roubava Livros"
+#ok
+- isbn: "8598078174"
+  title: "A Menina que Roubava Livros"
   author: "Markus Zusak"
   cover: "/assets/images/books/menina-roubava-livros.jpg"
   publisher: "Intrínseca"
-  year: 2005
+  edition: 1
+  pages: 480
+  language: "Português"
+  publication_date: "2013-06-10"
 
-- title: "A Revolução dos Bichos"
+#ok
+- isbn: "8535909559"
+  title: "A Revolução dos Bichos"
   author: "George Orwell"
   cover: "/assets/images/books/revolucao-bichos.jpg"
   publisher: "Companhia das Letras"
-  year: 1945
+  edition: 1
+  pages: 152
+  language: "Português"
+  publication_date: "2007-01-10"
 
-- title: "O Senhor dos Anéis: A Sociedade do Anel"
+#ok
+- isbn: "8595084750"
+  title: "O Senhor dos Anéis: A Sociedade do Anel"
   author: "J.R.R. Tolkien"
   cover: "/assets/images/books/senhor-dos-aneis-1.jpg"
-  publisher: "Harper Collins"
-  year: 1954
+  publisher: "HarperCollins"
+  edition: 1
+  pages: 576
+  language: "Português"
+  publication_date: "2019-11-25"
+
+#ok
+- isbn: "8595084769"
+  title: "O Senhor dos Anéis: As duas torres"
+  author: "J.R.R. Tolkien"
+  cover: "/assets/images/books/senhor-dos-aneis-2.jpg"
+  publisher: "HarperCollins"
+  edition: 1
+  pages: 464
+  language: "Português"
+  publication_date: "2019-11-25"
+
+#ok
+- isbn: "8595084777"
+  title: "O Senhor dos Anéis: O retorno do rei"
+  author: "J.R.R. Tolkien"
+  cover: "/assets/images/books/senhor-dos-aneis-3.jpg"
+  publisher: "HarperCollins"
+  edition: 1
+  pages: 528
+  language: "Português"
+  publication_date: "2019-11-25"
+
+#ok
+- isbn: "8535933921"
+  title: "Sapiens: Uma Breve História da Humanidade"
+  author: "Yuval Noah Harari"
+  cover: "/assets/images/books/sapiens-uma-breve-historia-da-humanidade.jpg"
+  publisher: "Companhia das Letras"
+  edition: 1
+  pages: 472
+  language: "Português"
+  publication_date: "2020-11-13"
+
+#ok
+- isbn: "8582850352"
+  title: "Dom Casmurro"
+  author: "Machado de Assis"
+  cover: "/assets/images/books/dom-casmurro.jpg"
+  publisher: "Penguin-Companhia"
+  edition: 1
+  pages: 400
+  language: "Português"
+  publication_date: "2016-07-26"
+
+#ok
+- isbn: "0275965074"
+  title: "The Catcher in the Rye"
+  author: "J. D. Salinger"
+  cover: "/assets/images/books/the-catcher-in-the-rye.jpg"
+  publisher: "Back Bay Books"
+  edition: 1
+  pages: 288
+  language: "English"
+  publication_date: "2001-01-30"
+
+#ok
+- isbn: "0241248744"
+  title: "Les Misérables"
+  author: "Victor Hugo"
+  cover: "/assets/images/books/les-miserables.jpg"
+  publisher: "Penguin Classics"
+  edition: 1
+  pages: 1456
+  language: "English"
+  publication_date: "2015-11-26"
+
+#ok
+- isbn: "054792822X"
+  title: "The Hobbit: Or There and Back Again"
+  author: "J. R. R. Tolkien"
+  cover: "/assets/images/books/the-hobbit.jpg"
+  publisher: "Mariner Books"
+  edition: 1
+  pages: 300
+  language: "English"
+  publication_date: "2012-09-18"
+
+#ok
+- isbn: "8576573008"
+  title: "Neuromancer"
+  author: "William Gibson"
+  cover: "/assets/images/books/neuromancer.jpg"
+  publisher: "Editora Aleph"
+  edition: 5
+  pages: 320
+  language: "Português"
+  publication_date: "2016-08-19"
+
+#ok
+- isbn: "0140449132"
+  title: "Crime and Punishment"
+  author: "Fyodor Dostoevsky"
+  cover: "/assets/images/books/crime-and-punishment.jpg"
+  publisher: "Penguin Books"
+  edition: 1
+  pages: 718
+  language: "Português"
+  publication_date: "2002-12-31"
+
+#ok
+- isbn: "8580576466"
+  title: "Uma Breve História do Tempo"
+  author: "Stephen Hawking"
+  cover: "/assets/images/books/uma-breve-historia-do-tempo.jpg"
+  publisher: "Intrínseca"
+  edition: 1
+  pages: 256
+  language: "Português"
+  publication_date: "2015-01-13"
+
+#ok
+- isbn: "0374533555"
+  title: "Thinking, Fast and Slow"
+  author: "Daniel Kahneman"
+  cover: "/assets/images/books/thinking-fast-and-slow.jpg"
+  publisher: "Farrar Straus Giroux"
+  edition: 1
+  pages: 499
+  language: "English"
+  publication_date: "2013-04-02"
+
+#ok
+- isbn: "0140447938"
+  title: "War and Peace"
+  author: "Leo Tolstoy"
+  cover: "/assets/images/books/war-and-peace.jpg"
+  publisher: "Penguin Books"
+  edition: 1
+  pages: 1399
+  language: "English"
+  publication_date: "2009-02-24"
+

@@ -1,206 +1,151 @@
+# _data/posts.yml
+# --------------------------------------------------
+# OBS.: avatar "default.jpg" é só um placeholder.
+#       Crie a imagem ou ajuste o caminho conforme desejar.
+# --------------------------------------------------
+
 - id: 1
-  author:
-    name: Eduarda
-    avatar: /assets/images/pp/pp1.jpg
+  author_id: eduarda
   time: "2025-05-13T19:20:00-03:00"
   excerpt: "Milton reconta a queda de Adão e Eva com versos épicos..."
-  book:
-    cover: /assets/images/books/paraiso-perdido.jpg
-    title: "Paraíso Perdido"
-    author: "John Milton"
-    publisher: "Editora 34"
-    year: 1667
-    progress_pct: 78
+  book_isbn: "8573266112"
+  progress_pct: 78
 
 - id: 2
-  author:
-    name: Poliana
-    avatar: /assets/images/pp/pp2.jpg
+  author_id: poliana
   time: "2025-05-13T18:45:00-03:00"
   excerpt: "Comecei a reler '1984' e me incomoda a atualidade da obra."
-  book:
-    cover: /assets/images/books/1984.jpg
-    title: "1984"
-    author: "George Orwell"
-    publisher: "Companhia das Letras"
-    year: 1949
-    progress_pct: 45
+  book_isbn: "8535914846"
+  progress_pct: 45
 
 - id: 3
-  author:
-    name: Mariana
-    avatar: /assets/images/pp/pp3.jpg
+  author_id: mariana
   time: "2025-05-13T17:30:00-03:00"
   excerpt: "A densidade filosófica de 'Cem Anos de Solidão' sempre me surpreende."
-  book:
-    cover: /assets/images/books/cem-anos-de-solidao.jpg
-    title: "Cem Anos de Solidão"
-    author: "Gabriel G. Márquez"
-    publisher: "Companhia das Letras"
-    year: 1967
-    progress_pct: 100
+  book_isbn: "9788501012074"
+  progress_pct: 100
 
 - id: 4
-  author:
-    name: Lucas
-    avatar: /assets/images/pp/pp4.jpg
+  author_id: lucas
   time: "2025-05-12T21:15:00-03:00"
   excerpt: "Impressionado com a narrativa de 'O Nome do Vento', recomendo!"
-  book:
-    cover: /assets/images/books/nome-do-vento.jpg
-    title: "O Nome do Vento"
-    author: "Patrick Rothfuss"
-    publisher: "Arqueiro"
-    year: 2007
-    progress_pct: 60
+  book_isbn: "8599296493"
+  progress_pct: 60
   comments:
-    - user: Ana
-      avatar: /assets/images/pp/pp5.jpg
+    - user_id: ana
       text: "Também amo esse livro!"
-    - user: Bruno
-      avatar: /assets/images/pp/pp6.jpg
+    - user_id: bruno
       text: "Está na minha lista de leitura!"
 
 - id: 5
-  author:
-    name: Camila
-    avatar: /assets/images/pp/pp5.jpg
+  author_id: xing-ling
   time: "2025-05-11T14:50:00-03:00"
   excerpt: "'Orgulho e Preconceito' é eterno. Sempre encontro algo novo."
-  book:
-    cover: /assets/images/books/orgulho-e-preconceito.jpg
-    title: "Orgulho e Preconceito"
-    author: "Jane Austen"
-    publisher: "Penguin Classics"
-    year: 1813
-    progress_pct: 90
+  book_isbn: "8563560158"
+  progress_pct: 90
   comments:
-    - user: Eduarda
-      avatar: /assets/images/pp/pp1.jpg
+    - user_id: eduarda
       text: "Um clássico obrigatório!"
 
 - id: 6
-  author:
-    name: Gabriel
-    avatar: /assets/images/pp/pp6.jpg
+  author_id: gabriel
   time: "2025-05-10T18:05:00-03:00"
   excerpt: "Reflexões profundas em 'O Pequeno Príncipe'. Uma obra incrível."
-  book:
-    cover: /assets/images/books/pequeno-principe.jpg
-    title: "O Pequeno Príncipe"
-    author: "Antoine de Saint-Exupéry"
-    publisher: "Harper Collins"
-    year: 1943
-    progress_pct: 100
-  comments: []
+  book_isbn: "8595081514"
+  progress_pct: 100
 
 - id: 7
-  author:
-    name: Pedro
-    avatar: /assets/images/pp/pp7.jpg
+  author_id: pedro
   time: "2025-05-09T11:30:00-03:00"
   excerpt: "'It: A Coisa' me fez ter medo de palhaços novamente! Stephen King é genial."
-  book:
-    cover: /assets/images/books/it-a-coisa.jpg
-    title: "It: A Coisa"
-    author: "Stephen King"
-    publisher: "Suma"
-    year: 1986
-    progress_pct: 55
+  book_isbn: "8560280944"
+  progress_pct: 55
   comments:
-    - user: Diego
-      avatar: /assets/images/pp/pp2.jpg
+    - user_id: diego
       text: "A melhor obra dele, na minha opinião!"
 
 - id: 8
-  author:
-    name: Ana
-    avatar: /assets/images/pp/pp5.jpg
+  author_id: ana
   time: "2025-05-08T09:40:00-03:00"
   excerpt: "'Dom Quixote' é surpreendentemente divertido e relevante!"
-  book:
-    cover: /assets/images/books/dom-quixote.jpg
-    title: "Dom Quixote"
-    author: "Miguel de Cervantes"
-    publisher: "Editora 34"
-    year: 1605
-    progress_pct: 40
+  book_isbn: "8563560557"
+  progress_pct: 40
   comments:
-    - user: Lucas
-      avatar: /assets/images/pp/pp4.jpg
+    - user_id: lucas
       text: "Realmente, é uma leitura incrível!"
-    - user: Mariana
-      avatar: /assets/images/pp/pp3.jpg
+    - user_id: mariana
       text: "Preciso reler!"
 
 - id: 9
-  author:
-    name: Bruno
-    avatar: /assets/images/pp/pp6.jpg
+  author_id: bruno
   time: "2025-05-07T16:20:00-03:00"
   excerpt: "'O Conto da Aia' continua atual e perturbador. Muito recomendado!"
-  book:
-    cover: /assets/images/books/o-conto-da-aia.jpg
-    title: "O Conto da Aia"
-    author: "Margaret Atwood"
-    publisher: "Rocco"
-    year: 1985
-    progress_pct: 70
-  comments: []
+  book_isbn: "8532520669"
+  progress_pct: 70
 
 - id: 10
-  author:
-    name: Júlia
-    avatar: /assets/images/pp/pp8.jpg
+  author_id: julia
   time: "2025-05-06T12:10:00-03:00"
   excerpt: "Markus Zusak realmente mexe com as emoções em 'A Menina que Roubava Livros'."
-  book:
-    cover: /assets/images/books/menina-roubava-livros.jpg
-    title: "A Menina que Roubava Livros"
-    author: "Markus Zusak"
-    publisher: "Intrínseca"
-    year: 2005
-    progress_pct: 100
+  book_isbn: "8598078174"
+  progress_pct: 100
   comments:
-    - user: Camila
-      avatar: /assets/images/pp/pp5.jpg
+    - user_id: xing-ling
       text: "Uma história linda e tocante."
 
 - id: 11
-  author:
-    name: Fernando
-    avatar: /assets/images/pp/pp9.jpg
+  author_id: fernando
   time: "2025-05-05T20:00:00-03:00"
   excerpt: "Revendo minhas perspectivas com 'A Revolução dos Bichos'. Impressionante!"
-  book:
-    cover: /assets/images/books/revolucao-bichos.jpg
-    title: "A Revolução dos Bichos"
-    author: "George Orwell"
-    publisher: "Companhia das Letras"
-    year: 1945
-    progress_pct: 80
+  book_isbn: "8535909559"
+  progress_pct: 80
   comments:
-    - user: Pedro
-      avatar: /assets/images/pp/pp7.jpg
+    - user_id: pedro
       text: "Orwell sempre certeiro!"
 
 - id: 12
-  author:
-    name: Laura
-    avatar: /assets/images/pp/pp10.jpg
+  author_id: laura
   time: "2025-05-04T08:45:00-03:00"
   excerpt: "'O Senhor dos Anéis' continua sendo uma jornada épica sem igual!"
-  book:
-    cover: /assets/images/books/senhor-dos-aneis-1.jpg
-    title: "O Senhor dos Anéis: A Sociedade do Anel"
-    author: "J.R.R. Tolkien"
-    publisher: "Harper Collins"
-    year: 1954
-    progress_pct: 65
+  book_isbn: "8595084750"
+  progress_pct: 65
   comments:
-    - user: Gabriel
-      avatar: /assets/images/pp/pp6.jpg
+    - user_id: gabriel
       text: "Melhor fantasia já escrita!"
-    - user: Júlia
-      avatar: /assets/images/pp/pp8.jpg
+    - user_id: julia
       text: "Adoro! Estou relendo pela terceira vez!"
+
+- id: 13
+  author_id: system
+  time: "2025-05-03T12:00:00-03:00"
+  excerpt: "Leitura em andamento de 'Sapiens'. Recomendo a todos!"
+  book_isbn: "8535933921"
+  progress_pct: 0
+
+- id: 14
+  author_id: system
+  time: "2025-05-02T12:00:00-03:00"
+  excerpt: "Acabei de iniciar 'Dom Casmurro'. Vamos discutir!"
+  book_isbn: "8582850352"
+  progress_pct: 0
+
+- id: 17
+  author_id: system
+  time: "2025-04-29T12:00:00-03:00"
+  excerpt: "Revisitando a Terra-média em 'The Hobbit'."
+  book_isbn: "054792822X"
+  progress_pct: 0
+
+- id: 18
+  author_id: system
+  time: "2025-04-28T12:00:00-03:00"
+  excerpt: "Cyberpunk raiz: começando 'Neuromancer'."
+  book_isbn: "8576573008"
+  progress_pct: 0
+
+- id: 20
+  author_id: system
+  time: "2025-04-26T12:00:00-03:00"
+  excerpt: "Relendo 'Uma breve história do tempo'. Física para todos!"
+  book_isbn: "8580576466"
+  progress_pct: 0

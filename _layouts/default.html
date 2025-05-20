@@ -41,10 +41,15 @@
     <script src="{{ '/scripts/sidebar.js' | relative_url }}" defer></script>
   {%- endunless -%}
   
-  {%- if page.extra_js -%}
-    {%- for js in page.extra_js -%}
-      <script src="{{ js | relative_url }}" defer></script>
-    {%- endfor -%}
-  {%- endif -%}
+ {%- if page.extra_js -%}
+  {%- assign js_list = page.extra_js -%}
+  {%- unless js_list.first -%}  {# é string — transforma em lista #}
+    {%- assign js_list = js_list | split: ',' -%}
+  {%- endunless -%}
+  {%- for js in js_list -%}
+    <script src="{{ js | strip | relative_url }}" defer></script>
+  {%- endfor -%}
+{%- endif -%}
+
 </body>
 </html>

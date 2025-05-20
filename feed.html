@@ -10,9 +10,12 @@ extra_js:
 <section class="recommended-container" aria-label="Leituras recomendadas">
   <h2>Leituras Recomendadas</h2>
   <div class="cards">
-    {% for n in (1..17) %}
+    {% for book in site.data.books %}
       <div class="card">
-        <img src="{{ '/assets/images/books/recBook' | append: n | append: '.jpg' | relative_url }}" alt="Livro {{ n }}" class="book-recomendation">
+          <img 
+            src="{{ book.cover | relative_url }}"
+            alt="Capa de {{ book.title }}"
+            class="book-recommendation">
       </div>
     {% endfor %}
   </div>

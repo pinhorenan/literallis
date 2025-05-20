@@ -1,0 +1,46 @@
+# _data/users.yml
+eduarda:
+  name: "Eduarda"
+  avatar: "/assets/images/users/eduarda.jpg"
+poliana:
+  name: "Poliana"
+  avatar: "/assets/images/users/poliana.jpg"
+mariana:
+  name: "Mariana"
+  avatar: "/assets/images/users/mariana.jpg"
+lucas:
+  name: "Lucas"
+  avatar: "/assets/images/users/lucas.jpg"
+xing-ling:
+  name: "Xing Ling"
+  avatar: "/assets/images/users/xing-ling.jpg"
+gabriel:
+  name: "Gabriel"
+  avatar: "/assets/images/users/gabriel.jpg"
+pedro:
+  name: "Pedro"
+  avatar: "/assets/images/users/pedro.jpg"
+ana:
+  name: "Ana"
+  avatar: "/assets/images/users/ana.jpg"
+bruno:
+  name: "Bruno"
+  avatar: "/assets/images/users/bruno.jpg"
+camila:
+  name: "Camila"
+  avatar: "/assets/images/users/camila.jpg"
+fernando:
+  name: "Fernando"
+  avatar: "/assets/images/users/fernando.jpg"
+laura:
+  name: "Laura"
+  avatar: "/assets/images/users/laura.jpg"
+diego:
+  name: "Diego"
+  avatar: "/assets/images/users/diego.jpg"
+julia:
+  name: "Júlia"
+  avatar: "/assets/images/users/julia.jpg"
+system:
+  name: "Sistema"
+  avatar: "/assets/images/users/system.jpg"
