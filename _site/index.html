@@ -16,60 +16,28 @@
   <title>Landing Page | Literalis</title>
 </head>
 
-<body>
-  <header class="site-header" role="banner">
-  <div class="left-navbar">
-    <button id="hamburger" class="icon-button hamburger-btn"
-            aria-label="Abrir menu" aria-expanded="false">
-      <!-- ícone hambúrguer -->
-      <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor"
-           fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="6"  x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
-    </button>
+<body><main class="main-container">
+    <style>
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  /* Imagem de fundo com menos zoom (150% em vez de cover puro) */
+  background: url("/literalis/assets/images/bg-landing.jpg")
+              repeat center center fixed;
+  background-size: 100%;
+  
+  /* Transparência */
+  opacity: 0.6;
+  
+  /* Coloca atrás de tudo */
+  z-index: -1;
+}
+</style>
 
-    <a href="/literalis/" class="logo"
-       aria-label="Página inicial Literalis">
-      <img src="/literalis/assets/images/logo_small.svg"
-           alt="Literalis">
-    </a>
-  </div>
-
-  <!-- bloco de busca -->
-  <div class="search-box" role="search">
-    <input type="search" name="q" placeholder="Pesquisar…" aria-label="Pesquisar">
-    <button class="icon-button search-btn" title="Pesquisar">
-      <img src="/literalis/assets/images/icons/search.svg"
-           alt="" aria-hidden="true">
-    </button>
-  </div>
-
-  <!-- ícones de navegação rápida -->
-  <ul class="nav-links" role="navigation" aria-label="Links rápidos">
-    <li>
-      <button class="icon-button" title="Mensagens">
-        <img src="/literalis/assets/images/icons/message.svg"
-             alt="Mensagens">
-      </button>
-    </li>
-    <li>
-      <button class="icon-button" title="Notificações">
-        <img src="/literalis/assets/images/icons/notification.svg"
-             alt="Notificações">
-      </button>
-    </li>
-    <li>
-      <button class="profile-btn" title="Perfil">
-        <img src="/literalis/assets/images/pp/diego.jpg"
-             alt="Sua foto de perfil">
-      </button>
-    </li>
-  </ul>
-</header>
-<main class="main-container">
-    <section id="hero_section">
+<section id="hero_section">
   <div class="hero-content">
     <h1>Organize e compartilhe todas suas experiências de leituras</h1>
     <div class="logo-container">

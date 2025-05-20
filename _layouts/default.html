@@ -23,9 +23,9 @@
 </head>
 
 <body>
-  {% include header.html %}
-
+  
   {%- unless page.url == site.baseurl or page.url == '/' -%}
+    {% include header.html %}
     {% include sidebar.html %}
   {%- endunless -%}
 

@@ -1,8 +1,28 @@
 ---
 layout: default
 title: Landing Page
-extra_css: /styles/pages/index.css
+extra_css: styles/pages/index.css
 ---
+
+<style>
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  /* Imagem de fundo com menos zoom (150% em vez de cover puro) */
+  background: url("{{ '/assets/images/bg-landing.jpg' | relative_url }}")
+              repeat center center fixed;
+  background-size: 100%;
+  
+  /* Transparência */
+  opacity: 0.6;
+  
+  /* Coloca atrás de tudo */
+  z-index: -1;
+}
+</style>
 
 <section id="hero_section">
   <div class="hero-content">
